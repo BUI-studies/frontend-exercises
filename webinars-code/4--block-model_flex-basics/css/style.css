@@ -1,0 +1,54 @@
+* {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 1165px;
+  margin: 0 auto;
+}
+
+.navigation-wrapper {
+  box-shadow: 0px 4px 15px rgba(49, 60, 72, 0.05);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 11px 0;
+}
+
+.navigation__logo {
+  width: 53px;
+  height: 58px;
+}
+
+.navigation__menu {
+  max-width: 60%;
+  width: 100%;
+
+  display: flex;
+  /* дуже уважно, може не спрацювати на старих браузерах */
+  gap: 40px;
+}
+
+.navigation__item {
+  /* margin-right: 40px; */
+}
+
+.navigation__link {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.navigation__profile {
+  width: 34px;
+  height: 34px;
+}
+
+/* .mr-0 {
+  margin-right: 0;
+} */

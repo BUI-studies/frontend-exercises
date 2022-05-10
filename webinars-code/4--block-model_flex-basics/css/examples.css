@@ -1,0 +1,40 @@
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.block {
+  /* w200+h160 */
+  width: 126px;
+  height: 83px;
+
+  margin-top: 120px;
+
+  background-color: #0f0;
+}
+
+.dummy-block {
+  /* box-sizing: border-box; */
+  width: 180px;
+  height: 80px;
+
+  padding: 17px 9px 0;
+  border: 1px solid pink;
+  margin-bottom: 300px;
+
+  background-color: #0a0a0a;
+}
+
+.funny-block {
+  /* box-sizing: border-box; */
+  width: 800px;
+  height: 430px;
+
+  background-color: teal;
+
+  padding-left: 73px;
+  padding-top: 107px;
+  border-bottom: 50px solid #000;
+
+  margin: 50px;
+}
