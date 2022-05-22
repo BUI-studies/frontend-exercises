@@ -1,167 +1,201 @@
+/* !!!ATTENTION!!! */
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
+/* !!!ATTENTION!!! */
 
 body {
-	font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .container {
-	max-width: 1140px;
-	margin: 0 auto;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 .navigation {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 82px;
-	/* example 1 */
-	padding: 80px 80px 0;
-	/* example 1 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* example 1 */
+  padding: 80px;
+  /* example 1 */
 
-	/* example 2 */
-	/* padding-top: 80px;
+  /* example 2 */
+  /* padding: 80px 0;
 	max-width: calc(100% - 160px);
 	margin: 0 auto; */
-	/* example 2 */
+  /* example 2 */
 }
 
 .menu {
-	display: flex;
-	align-items: center;
-	column-gap: 43px;
-	list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 43px;
+
+  list-style: none;
 }
 
 .menu__link {
-	line-height: 19px;
-	color: #08090a;
-	transition: color, box-shadow, font-weight, 0.2s ease-in-out;
+  line-height: 19px;
+  color: #08090a;
+
+  transition: color, box-shadow, font-weight, 0.2s ease-in-out;
 }
 
 .menu__link:hover {
-	box-shadow: 0px 3px 0 0px #8cc5f9;
-	font-weight: 700;
-	color: #8cc5f9;
+  font-weight: 700;
+  color: #8cc5f9;
+
+  box-shadow: 0px 3px 0 0px #8cc5f9;
 }
 
 .language {
-	display: flex;
-	align-items: center;
-	column-gap: 5px;
-	cursor: pointer;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
 }
 
-.aboutUs {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 155px;
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 155px;
 }
 
-.aboutUs__desc {
-	max-width: 640px;
+.hero__desc {
+  max-width: 640px;
 }
 
-.aboutUs__title {
-	margin-bottom: 8px;
-	font-weight: 700;
-	font-size: 50px;
-	line-height: 70px;
-	color: #8cc5f9;
+.hero__title {
+  margin-bottom: 8px;
+
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 70px;
+
+  color: #8cc5f9;
 }
 
-.aboutUs__text {
-	margin-bottom: 20px;
-	font-size: 22px;
-	line-height: 30px;
-	color: #4f5665;
+.hero__text {
+  margin-bottom: 20px;
+
+  font-size: 22px;
+  line-height: 30px;
+
+  color: #4f5665;
 }
 
-.aboutUs__text > span {
-	color: #8cc5f9;
+.hero__text > span {
+  color: #8cc5f9;
 }
 
-.team {
-	margin-bottom: 155px;
+.hero__picture {
+  width: 353px;
+}
+
+.team-wrapper {
+  margin-bottom: 155px;
 }
 
 .team__title {
-	margin-bottom: 58px;
-	text-align: center;
-	font-weight: 500;
-	font-size: 35px;
-	line-height: 50px;
-	color: #0b132a;
+  margin-bottom: 58px;
+
+  text-align: center;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+
+  color: #0b132a;
 }
 
-.team__list {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 30px;
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
+/* also we need to show another way with fixed height for items and flex-direction: column approach */
 .team__item {
-	min-width: 261px;
-	padding: 24px 29px;
-	text-align: center;
-	border-radius: 3px;
-	border: 1px solid #8cc5f9;
+  min-width: 261px;
+  padding: 24px 29px;
+
+  text-align: center;
+
+  border-radius: 3px;
+  border: 1px solid #8cc5f9;
 }
 
 .team__item-figure {
-	margin-bottom: 20px;
+  width: 119px;
+  height: 119px;
+
+  margin: 0 auto 20px;
 }
 
 .team__item-figure > img {
-	border-radius: 50%;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .team__item-title {
-	margin-bottom: 12px;
-	font-style: italic;
-	font-weight: 700;
-	font-size: 22px;
-	line-height: 26px;
-	color: #8cc5f9;
+  margin-bottom: 12px;
+
+  font-style: italic;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #8cc5f9;
 }
 
 .team__item-subtitle {
-	max-width: 202px;
-	margin-bottom: 32px;
-	font-style: italic;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 17px;
-	color: #bdbdbd;
+  max-width: 202px;
+  margin-bottom: 32px;
+
+  font-style: italic;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #bdbdbd;
 }
 
 .team__item-link {
-	font-weight: 300;
-	font-size: 14px;
-	line-height: 17px;
-	color: #bdbdbd;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #bdbdbd;
 }
 
-.advantages {
-	margin-bottom: 210px;
+.advantages-wrapper {
+  margin-bottom: 210px;
 }
 
 .advantages__title {
-	margin-bottom: 120px;
-	font-weight: 500;
-	font-size: 35px;
-	line-height: 41px;
-	text-align: center;
-	color: #4f4f4f;
+  margin-bottom: 120px;
+
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 41px;
+
+  text-align: center;
+
+  color: #4f4f4f;
 }
 
 /* example 1 */
-.advantages__list {
-	display: flex;
-	flex-direction: column;
-	row-gap: 150px;
+.advantages {
+  display: flex;
+  flex-direction: column;
+  row-gap: 150px;
 }
 /* example 1 */
 
@@ -172,101 +206,127 @@ body {
 /* example 2 */
 
 .advantages__item {
-	display: flex;
-	align-items: center;
-	column-gap: 60px;
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
+}
+
+.advantagtes__number {
+  max-width: 220px;
+  width: 100%;
+
+  text-align: right;
+
+  /* OR */
+  /* display: flex;
+  justify-content: flex-end; */
+}
+
+.advantagtes__number svg {
+  width: auto;
+  height: 229px;
 }
 
 .advantages__desc {
-	max-width: 917px;
+  max-width: 917px;
 }
 
 .advantages__desc-title {
-	margin-bottom: 30px;
-	font-weight: 500;
-	font-size: 55px;
-	line-height: 65px;
-	color: #8cc5f9;
+  margin-bottom: 30px;
+
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 65px;
+
+  color: #8cc5f9;
 }
 
 .advantages__desc-text {
-	font-size: 35px;
-	line-height: 41px;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.gradient-bg {
+  background-image: linear-gradient(to bottom, #fff 50%, #f8f8f8 50%);
+}
+
+.jobs-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 50px 70px 50px 46px;
+
+  border-radius: 10px;
+  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
 }
 
 .jobs {
-	background-image: linear-gradient(to bottom, #fff 50%, #f8f8f8 50%);
+  display: flex;
+  column-gap: 40px;
 }
 
-.jobs__wrapper {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 50px 70px 50px 46px;
-	box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.05);
-	background-color: #fff;
-}
-
-.jobs__positions {
-	display: flex;
-	column-gap: 40px;
+.jobs__img {
+  width: auto;
+  height: 134px;
 }
 
 .jobs__desc {
-	max-width: 410px;
+  max-width: 410px;
 }
 
-.jobs__desc-title {
-	margin-bottom: 17px;
-	font-weight: 500;
-	font-size: 35px;
-	line-height: 45px;
-	color: #0b132a;
+.jobs__title {
+  margin-bottom: 17px;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 45px;
+  color: #0b132a;
 }
 
-.jobs__desc-text {
-	line-height: 30px;
-	color: #4f5665;
+.jobs__text {
+  line-height: 30px;
+  color: #4f5665;
 }
 
-.jobs__desc-link {
-	display: inline-block;
-	padding: 18px 91px;
-	border-radius: 10px;
-	line-height: 25px;
-	color: #ffffff;
-	background: #8cc5f9;
+.jobs-link {
+  display: inline-block;
+  padding: 18px 91px;
+  border-radius: 10px;
+  line-height: 25px;
+  color: #ffffff;
+  background: #8cc5f9;
 }
 
-.footer {
-	background-color: #f8f8f8;
-	padding-top: 67px;
-	padding-bottom: 77px;
+.bottom-bg {
+  background-color: #f8f8f8;
+  padding-top: 67px;
+  padding-bottom: 77px;
 }
 
-.footer__wrapper {
-	display: flex;
-	justify-content: space-between;
+.bottom-bar {
+  display: flex;
+  justify-content: space-between;
 }
 
-.footer__logo {
-	margin-bottom: 5px;
+.bottom-bar__logo {
+  margin-bottom: 5px;
 }
 
-.footer__text {
-	max-width: 400px;
-	font-size: 18px;
-	line-height: 30px;
-	color: #bdbdbd;
+.bottom-bar__text {
+  max-width: 400px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #bdbdbd;
 }
 
-.footer__icons {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .footer__copyright {
-	line-height: 30px;
-	color: #bdbdbd;
+  line-height: 30px;
+  color: #bdbdbd;
 }
