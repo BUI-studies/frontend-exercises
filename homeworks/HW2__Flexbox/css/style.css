@@ -1,0 +1,324 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.primary__title {
+	text-align: center;
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 50px;
+
+	color: #0b132a;
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* example 1 */
+	padding: 80px;
+	/* example 1 */
+
+	/* example 2 */
+	/* padding: 80px 0;
+	max-width: calc(100% - 160px);
+	margin: 0 auto; */
+	/* example 2 */
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	column-gap: 43px;
+
+	list-style: none;
+}
+
+.menu__link {
+	line-height: 19px;
+	color: #08090a;
+
+	transition: color, box-shadow, font-weight, 0.2s ease-in-out;
+}
+
+.menu__link:hover {
+	font-weight: 700;
+	color: #8cc5f9;
+
+	box-shadow: 0px 3px 0 0px #8cc5f9;
+}
+
+.language {
+	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	column-gap: 5px;
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 155px;
+}
+
+.hero__desc {
+	max-width: 640px;
+}
+
+.hero__title {
+	margin-bottom: 8px;
+
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 70px;
+
+	color: #8cc5f9;
+}
+
+.hero__text {
+	margin-bottom: 20px;
+
+	font-size: 22px;
+	line-height: 30px;
+
+	color: #4f5665;
+}
+
+.hero__text > span {
+	color: #8cc5f9;
+}
+
+.hero__picture {
+	width: 353px;
+}
+
+.team-wrapper {
+	margin-bottom: 155px;
+}
+
+.team {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.primary__title--team {
+	margin-bottom: 58px;
+}
+
+.team__item {
+	min-width: 261px;
+	padding: 24px 29px;
+
+	text-align: center;
+
+	border-radius: 3px;
+	border: 1px solid #8cc5f9;
+}
+
+.team__item-figure {
+	width: 119px;
+	height: 119px;
+
+	margin: 0 auto 20px;
+}
+
+.team__item-figure > img {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.team__item-title {
+	margin-bottom: 12px;
+
+	font-style: italic;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 26px;
+
+	color: #8cc5f9;
+}
+
+.team__item-subtitle {
+	max-width: 202px;
+	margin-bottom: 32px;
+
+	font-style: italic;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+
+	color: #bdbdbd;
+}
+
+.team__item-link {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 17px;
+
+	color: #bdbdbd;
+}
+
+.advantages-wrapper {
+	margin-bottom: 210px;
+}
+
+.primary__title--advatanges {
+	margin-bottom: 120px;
+	color: #4f4f4f;
+}
+
+/* example 1 */
+.advantages {
+	display: flex;
+	flex-direction: column;
+	row-gap: 150px;
+}
+/* example 1 */
+
+/* example 2 */
+/* .advantages__item:not(:last-child) {
+	margin-bottom: 150px;
+} */
+/* example 2 */
+
+.advantages__item {
+	display: flex;
+	align-items: center;
+	column-gap: 60px;
+}
+
+.advantagtes__number {
+	max-width: 220px;
+	width: 100%;
+
+	text-align: right;
+
+	/* OR */
+	/* display: flex;
+  justify-content: flex-end; */
+}
+
+.advantagtes__number svg {
+	width: auto;
+	height: 229px;
+}
+
+.advantages__desc {
+	max-width: 917px;
+}
+
+.advantages__desc-title {
+	margin-bottom: 30px;
+
+	font-weight: 500;
+	font-size: 55px;
+	line-height: 65px;
+
+	color: #8cc5f9;
+}
+
+.advantages__desc-text {
+	font-size: 35px;
+	line-height: 41px;
+}
+
+.gradient-bg {
+	background-image: linear-gradient(to bottom, #fff 50%, #f8f8f8 50%);
+}
+
+.jobs-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 50px 70px 50px 46px;
+
+	border-radius: 10px;
+	box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.05);
+	background-color: #fff;
+}
+
+.jobs {
+	display: flex;
+	column-gap: 40px;
+}
+
+.jobs__img {
+	width: auto;
+	height: 134px;
+}
+
+.jobs__desc {
+	max-width: 410px;
+}
+
+.jobs__title {
+	margin-bottom: 17px;
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 45px;
+	color: #0b132a;
+}
+
+.jobs__text {
+	line-height: 30px;
+	color: #4f5665;
+}
+
+.primary-link {
+	display: inline-block;
+	padding: 18px 91px;
+	border-radius: 10px;
+	line-height: 25px;
+	color: #ffffff;
+	background: #8cc5f9;
+}
+
+.bottom-bg {
+	background-color: #f8f8f8;
+	padding-top: 67px;
+	padding-bottom: 77px;
+}
+
+.bottom-bar {
+	display: flex;
+	justify-content: space-between;
+}
+
+.bottom-bar__logo {
+	margin-bottom: 5px;
+}
+
+.bottom-bar__text {
+	max-width: 400px;
+	font-size: 18px;
+	line-height: 30px;
+	color: #bdbdbd;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.footer__copyright {
+	line-height: 30px;
+	color: #bdbdbd;
+}
