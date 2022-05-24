@@ -32,8 +32,8 @@ body {
 	grid-auto-flow: column;
 	justify-content: space-between;
 	/* example 1 */
-	padding: 80px 80px 0;
-	margin-bottom: 100px;
+	padding: 80px;
+	margin-bottom: 20px;
 	/* example 1 */
 
 	/* example 2 */
@@ -45,7 +45,8 @@ body {
 }
 
 .menu {
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
 	align-items: center;
 	column-gap: 43px;
 
@@ -69,7 +70,8 @@ body {
 .language {
 	cursor: pointer;
 
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
 	align-items: center;
 	column-gap: 5px;
 }
@@ -114,7 +116,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 
-	padding: 36px 91px;
+	padding: 36px;
 
 	border-radius: 10px;
 	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
@@ -122,7 +124,9 @@ body {
 }
 
 .advatages__item {
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
+	justify-content: center;
 	column-gap: 36px;
 	padding: 36px 0;
 }
@@ -131,20 +135,12 @@ body {
 	border-right: 2px solid #eeeff2;
 }
 
-.advatages__item:nth-child(2) {
-	padding-left: 100px;
-	padding-right: 100px;
-}
-
-.advatages__item:last-child {
-	justify-self: end;
-}
-
 .advatages__icon {
 	min-width: 55px;
 	height: 55px;
 
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
 	justify-content: center;
 	align-items: center;
 
@@ -204,6 +200,8 @@ body {
 }
 
 .product__item {
+	height: 360px;
+
 	padding: 20px 27px 36px 36px;
 
 	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
@@ -226,12 +224,15 @@ body {
 }
 
 .product__item-text {
+	height: 107px;
 	margin-bottom: 46px;
 
 	font-size: 18px;
 	line-height: 30px;
 
 	color: #08090a;
+
+	overflow-y: hidden;
 }
 
 .product__item-link {
@@ -316,9 +317,18 @@ body {
 }
 
 .customers__head {
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
 	align-items: center;
 	column-gap: 20px;
+}
+
+.customers__avatar {
+	width: 50px;
+}
+
+.customers__avatar > img {
+	width: 100%;
 }
 
 .customers__info-name {
@@ -332,10 +342,16 @@ body {
 }
 
 .customers__info-location {
+	width: 250px;
+
 	font-size: 14px;
 	line-height: 30px;
 
 	color: #4f5665;
+
+	text-overflow: ellipsis;
+	overflow-x: hidden;
+	white-space: nowrap;
 }
 
 .customers__desc {
@@ -349,7 +365,8 @@ body {
 }
 
 .jobs-wrapper {
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
 	justify-content: space-between;
 	align-items: center;
 
@@ -361,7 +378,8 @@ body {
 }
 
 .jobs {
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
 	column-gap: 40px;
 }
 
@@ -407,7 +425,8 @@ body {
 }
 
 .bottom-bar {
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
 	justify-content: space-between;
 }
 
@@ -423,9 +442,10 @@ body {
 }
 
 .social {
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: end;
 }
 
 .footer__copyright {
