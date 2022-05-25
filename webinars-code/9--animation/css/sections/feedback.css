@@ -1,0 +1,127 @@
+.feedback-wrapper {
+  padding: 50px 0;
+}
+
+/* .feedback-wrapper .section-subtitle {
+  margin: 30px auto 45px;
+} */
+
+.feedback {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.feedback__form {
+  box-sizing: border-box;
+  width: 435px;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 10px;
+  box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+}
+
+.feedback__field {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 25px;
+}
+
+.feedback__field:last-child {
+  margin-bottom: 45px;
+}
+
+.feedback__caption {
+  margin-left: 9px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.feedback__input {
+  box-sizing: border-box;
+  margin-top: 5px;
+  padding: 17px 24px;
+
+  border: none;
+
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.15),
+    -2px -2px 5px rgba(20, 29, 61, 0.15);
+}
+
+.feedback__input:focus-visible {
+  outline: 2px solid var(--dark-blue);
+}
+
+.feedback__choice {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.feedback__choice > .feedback__input {
+  width: 100%;
+}
+
+.feedback__choice::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  /* top: 28px; */
+
+  transform: translateY(50%);
+
+  border: 5px solid transparent;
+  border-top-color: var(--black);
+}
+
+.feedback__check {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox {
+  display: none;
+  opacity: 0;
+  z-index: -100;
+}
+
+.checkbox:checked ~ .checkox-wrapper > .checkmark {
+  border-bottom-color: var(--gold);
+  border-right-color: var(--gold);
+}
+
+.checkox-wrapper {
+  min-width: 10px;
+  min-height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-blue);
+}
+
+.checkmark {
+  box-sizing: border-box;
+  width: 9px;
+  height: 6px;
+  border: 2px solid transparent;
+  transform: translate(0px, -2px) rotate(45deg);
+}
+
+.feedback__text {
+  font-size: 12px;
+}
+
+.feedback__img {
+  width: 50%;
+}
