@@ -1,0 +1,92 @@
+:root {
+  --dark-blue: #4a607a;
+  --white: #fff;
+  --gold: #ddd0a4;
+  --black: #0d1c41;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--gold);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--dark-blue);
+  outline: 1px solid var(--dark-blue);
+}
+
+* {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 1165px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 72px;
+  text-align: center;
+}
+
+.section-title--white {
+  color: #fff;
+}
+
+.section-subtitle {
+  max-width: 500px;
+  margin: 30px auto 45px;
+  padding: 0 5px;
+
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+
+  color: var(--black);
+}
+
+.callme-btn {
+  cursor: pointer;
+  position: fixed;
+  right: 4vw;
+  bottom: 4vh;
+  padding: 20px 40px;
+
+  font-weight: 700;
+  color: var(--white);
+
+  border: none;
+  border-radius: 6px;
+  background-color: var(--dark-blue);
+
+  animation: wiggle 1s linear infinite;
+
+  box-shadow: 0 0 15px 0 var(--white);
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(10deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  15% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  25% {
+    transform: rotate(0deg);
+    /* background-color: var(--black); */
+  }
+}
