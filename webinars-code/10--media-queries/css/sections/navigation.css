@@ -1,0 +1,56 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.company {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 30.4px;
+  line-height: 31px;
+  color: var(--white);
+}
+
+.nav-menu-wrapper,
+.nav-menu {
+  display: flex;
+  align-items: center;
+  column-gap: 2.4vw;
+}
+
+.burger {
+  display: none;
+}
+
+.nav-menu__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--white);
+}
+
+@media screen and (max-width: 1024px) {
+  .burger {
+    display: block;
+  }
+  .nav-menu {
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 30px;
+
+    position: absolute;
+    top: 100px;
+    right: -300px;
+
+    background-color: var(--grey);
+  }
+  .nav-menu--active {
+    right: 0;
+  }
+  .action-btn {
+    display: none;
+  }
+}
