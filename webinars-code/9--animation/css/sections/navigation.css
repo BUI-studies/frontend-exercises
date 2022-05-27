@@ -40,11 +40,17 @@
   text-decoration: none;
   font-size: 18px;
   line-height: 21px;
-  color: #000000;
+  color: var(--black);
+
+  text-shadow: 0 0 0 transparent;
+  /* transition-property: text-shadow, color;
+  transition-duration: 0.5s, 0.5s; */
+  transition: 0.5s text-shadow, 0.5s color;
 }
 
 .navigation__link:hover {
   text-shadow: 0 0 6px var(--dark-blue);
+  color: var(--white);
 }
 
 .profile {
@@ -53,6 +59,17 @@
   align-items: center;
   /* може не підтримуватися у старих браузерах */
   gap: 12px;
+}
+
+.profile path {
+  fill: var(--black);
+  transform-origin: center;
+  transition: fill 0.5s, transform 0.5s;
+}
+
+.profile:hover path {
+  transform: rotate(360deg);
+  fill: var(--dark-blue);
 }
 
 .profile__img {

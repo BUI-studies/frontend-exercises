@@ -60,6 +60,7 @@
 }
 
 .hero__btn {
+  box-sizing: border-box;
   display: inline-block;
 
   width: 265px;
@@ -68,7 +69,7 @@
   line-height: 19px;
   text-transform: uppercase;
   background-color: #ffffff;
-  border: 1px solid #4a607a;
+  border: 1px solid var(--dark-blue);
   color: #0d1c41;
 
   padding: 20px;
@@ -78,9 +79,27 @@
 
   box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
   border-radius: 6px;
+
+  outline: 3px solid transparent;
+
+  transition: 0.5s outline;
+}
+
+.hero__btn:hover {
+  outline: 3px solid var(--dark-blue);
 }
 
 .hero__img {
   width: 543px;
   height: 400px;
+}
+
+#pig {
+  transform-origin: center;
+  transform: scale(1);
+  transition: fill 1s, transform 1s;
+}
+
+.hero__img:hover #pig {
+  transform: scale(1.1);
 }

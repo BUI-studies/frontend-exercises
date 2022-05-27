@@ -49,3 +49,44 @@ body::-webkit-scrollbar-thumb {
 
   color: var(--black);
 }
+
+.callme-btn {
+  cursor: pointer;
+  position: fixed;
+  right: 4vw;
+  bottom: 4vh;
+  padding: 20px 40px;
+
+  font-weight: 700;
+  color: var(--white);
+
+  border: none;
+  border-radius: 6px;
+  background-color: var(--dark-blue);
+
+  animation: wiggle 1s linear infinite;
+
+  box-shadow: 0 0 15px 0 var(--white);
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(10deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  15% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  25% {
+    transform: rotate(0deg);
+    /* background-color: var(--black); */
+  }
+}

@@ -112,8 +112,8 @@
 
 .checkmark {
   box-sizing: border-box;
-  width: 9px;
-  height: 6px;
+  width: 6px;
+  height: 9px;
   border: 2px solid transparent;
   transform: translate(0px, -2px) rotate(45deg);
 }
