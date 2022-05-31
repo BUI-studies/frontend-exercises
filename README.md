@@ -14,4 +14,5 @@ Links to the code from webinars:
 * [positioning](webinars-code/07--positioning/)
 * [forms](webinars-code/08--forms/)
 * [animations](webinars-code/09--animations/)
-* [forms](webinars-code/10--media-queries/)
+* [media queries](webinars-code/10--media-queries/)
+* [media queries practice](webinars-code/11--media-queries-practice/)
