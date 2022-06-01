@@ -1,11 +1,11 @@
 :root {
   --pink: #f24b88;
+  --dark-purple: #59253e;
   --white: #fff;
+  --light-grey: #f2f2f2;
   --black: #1f1c26;
   --dark-black: #0d0d0d;
   --semi-black: #332f3c;
-  --dark-purple: #59253e;
-  --light-grey: #f2f2f2;
 }
 
 body::-webkit-scrollbar {
@@ -21,13 +21,45 @@ body::-webkit-scrollbar-thumb {
 }
 
 * {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  color: var(--black);
+  font-family: "Poppins", sans-serif;
+  color: var(--white);
 }
 
 .container {
-  max-width: 1296px;
+  max-width: 1168px;
   margin: 0 auto;
-  padding: 0 72px;
+  padding: 0 12px;
+}
+
+.general-bg {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--black);
+}
+
+.primary-btn {
+  display: inline-block;
+  padding: 11px;
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+
+  border-radius: 10px;
+  background-color: var(--pink);
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .primary-btn {
+    padding: 20px 30px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
