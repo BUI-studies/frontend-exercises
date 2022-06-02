@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Homework 4</title>
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<div class="root-bgi">
+			<div class="hero">
+				<a class="logo" href="#">
+					<img class="logo__img" src="./img/logo.png" width="100%" alt="logotype" />
+				</a>
+				<h2 class="hero__title">Find 3D Objects, Mockups and Ilustration here</h2>
+				<figure class="hero__illustration">
+					<img src="./img/hero.png" width="100%" alt="illustration" />
+				</figure>
+			</div>
+			<div class="form-bgi">
+				<div class="lang">
+					<div class="lang__head">
+						<p class="lang__value">English (UK)</p>
+						<figure class="lang__icon">
+							<svg width="100%" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7.5 9L14.8612 0H0.138784L7.5 9Z" fill="#C4C4C4" />
+							</svg>
+						</figure>
+					</div>
+					<ul class="lang__list">
+						<li class="lang__list-item">Ukraine (UA)</li>
+						<li class="lang__list-item">Poland (PL)</li>
+					</ul>
+				</div>
+				<div class="signup">
+					<h1 class="signup__title">Create Account</h1>
+					<!-- example 1 -->
+					<div class="signup__society">
+						<a href="#" target="_blank" class="signup__society-link">
+							<figure class="signup__society-img">
+								<img src="./img/google.png" width="100%" alt="google" />
+							</figure>
+							<p>Sign up with Google</p>
+						</a>
+						<a href="#" target="_blank" class="signup__society-link">
+							<figure class="signup__society-img">
+								<img src="./img/facebook.png" width="100%" alt="facebook" />
+							</figure>
+							<p>Sign up with Facebook</p>
+						</a>
+					</div>
+					<!-- example 1 -->
+
+					<!-- example 2 -->
+					<!-- <ul class="signup__society">
+						<li class="signup__society-item">
+							<a href="#" target="_blank" class="signup__society-link">
+								<figure class="signup__society-img">
+									<img src="./img/google.png" width="100%" alt="google" />
+								</figure>
+								<p>Sign up with Google</p>
+							</a>
+						</li>
+						<li class="signup__society-item">
+							<a href="#" target="_blank" class="signup__society-link">
+								<figure class="signup__society-img">
+									<img src="./img/facebook.png" width="100%" alt="facebook" />
+								</figure>
+								<p>Sign up with Facebook</p>
+							</a>
+						</li>
+					</ul> -->
+					<!-- example 2 -->
+					<span class="divider">or</span>
+					<form class="singup__form">
+						<input class="signup__field" type="text" required placeholder="Full Name" />
+						<input class="signup__field" type="email" required placeholder="Email Address" />
+						<label class="signup__label-pass">
+							<input class="signup__field" type="password" required placeholder="Password" />
+							<figure class="signup__icon">
+								<svg class="signup__icon-eye" width="100%" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M0.222553 0.412904C0.404777 0.198567 0.679271 0.0547389 0.98571 0.0130292C1.29215 -0.0286804 1.60546 0.0351415 1.85678 0.190469L24.4893 14.1759C24.6186 14.2512 24.7288 14.3479 24.8136 14.4602C24.8983 14.5725 24.9558 14.6981 24.9827 14.8297C25.0095 14.9613 25.0051 15.0962 24.9699 15.2263C24.9346 15.3564 24.869 15.4792 24.7772 15.5873C24.6853 15.6955 24.569 15.7868 24.435 15.8559C24.3011 15.925 24.1523 15.9705 23.9974 15.9897C23.8425 16.0088 23.6846 16.0013 23.5332 15.9675C23.3818 15.9337 23.2398 15.8744 23.1157 15.7929L19.6069 13.6245C17.7089 14.9045 15.2833 15.9834 12.4863 15.9834C9.39419 15.9834 6.75789 14.6621 4.78652 13.2156C2.80422 11.7638 1.37291 10.0922 0.670521 9.19045C0.393292 8.83617 0.245331 8.41971 0.245331 7.9937C0.245331 7.56769 0.393292 7.15123 0.670521 6.79694C1.22151 6.08701 2.22358 4.90557 3.58621 3.7268L0.483217 1.80746C0.232043 1.65196 0.0634961 1.41772 0.0146181 1.15622C-0.0342599 0.894725 0.0405308 0.627366 0.222553 0.412904ZM5.50764 4.91223C4.42785 5.82163 3.46025 6.82318 2.62004 7.90113C2.59808 7.92764 2.5861 7.95923 2.5857 7.9917C2.5857 8.01967 2.59507 8.05164 2.62004 8.08227C3.26311 8.90941 4.55863 10.4132 6.31304 11.7012C8.07682 12.9972 10.1871 13.9855 12.4863 13.9855C14.3515 13.9855 16.0919 13.3355 17.6215 12.3991L14.1455 10.2494C13.6184 10.5318 13.0045 10.6734 12.3825 10.656C11.7605 10.6386 11.1588 10.4629 10.6547 10.1515C10.1505 9.84012 9.76694 9.40726 9.55319 8.90849C9.33944 8.40972 9.30527 7.86782 9.45506 7.35236L5.50608 4.91223H5.50764ZM12.4863 1.99792C11.6809 1.99792 10.8989 2.1178 10.1465 2.33224C9.9996 2.37735 9.84359 2.39691 9.68768 2.38979C9.53176 2.38267 9.3791 2.34901 9.23866 2.29078C9.09822 2.23255 8.97285 2.15094 8.86993 2.05074C8.767 1.95055 8.68861 1.83379 8.63936 1.70736C8.59011 1.58092 8.571 1.44735 8.58315 1.31452C8.5953 1.18168 8.63847 1.05227 8.71011 0.933881C8.78176 0.815496 8.88043 0.710538 9.00032 0.625184C9.12022 0.539831 9.25891 0.475806 9.40823 0.43688C10.4 0.150815 11.4394 0.0032898 12.4863 0C15.5783 0 18.2146 1.32129 20.186 2.76779C22.1683 4.22095 23.5996 5.89121 24.302 6.79428C24.5794 7.14877 24.7274 7.56545 24.7274 7.9917C24.7274 8.41794 24.5794 8.83463 24.302 9.18912C24.1303 9.41023 23.9149 9.67529 23.662 9.97098C23.5711 10.0768 23.4567 10.1663 23.3252 10.2344C23.1938 10.3025 23.0479 10.3478 22.896 10.3678C22.744 10.3877 22.5889 10.382 22.4395 10.3508C22.2902 10.3196 22.1495 10.2637 22.0255 10.1861C21.9015 10.1085 21.7966 10.0109 21.7168 9.89869C21.637 9.78652 21.5839 9.66204 21.5605 9.53236C21.5371 9.40268 21.5438 9.27033 21.5804 9.14288C21.6169 9.01543 21.6825 8.89536 21.7734 8.78954C22.0044 8.52182 22.1979 8.28073 22.3525 8.0836C22.3745 8.0569 22.3863 8.02503 22.3863 7.99237C22.3863 7.9597 22.3745 7.92784 22.3525 7.90113C21.7094 7.07399 20.4139 5.57022 18.6595 4.28222C16.8957 2.98623 14.7854 1.99792 12.4863 1.99792Z"
+										fill="#C6C5C5"
+									/>
+								</svg>
+							</figure>
+						</label>
+						<div class="signup__select">
+							<div class="signup__select-head">
+								<p class="signup__select-value">Town</p>
+								<figure class="signup__select-arrow">
+									<svg width="100%" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M8.00003 8C7.76638 8.00046 7.53994 7.91908 7.36003 7.77L1.36003 2.77C1.15581 2.60026 1.02739 2.35635 1.00301 2.09192C0.978631 1.8275 1.06029 1.56422 1.23003 1.36C1.39977 1.15578 1.64368 1.02736 1.90811 1.00298C2.17253 0.978601 2.43581 1.06026 2.64003 1.23L8.00003 5.71L13.36 1.39C13.4623 1.30694 13.58 1.2449 13.7064 1.20747C13.8327 1.17004 13.9652 1.15795 14.0962 1.17189C14.2272 1.18582 14.3542 1.22552 14.4699 1.2887C14.5855 1.35187 14.6875 1.43727 14.77 1.54C14.8616 1.64282 14.931 1.76345 14.9738 1.89432C15.0166 2.0252 15.0319 2.1635 15.0187 2.30056C15.0056 2.43762 14.9643 2.5705 14.8974 2.69085C14.8305 2.81121 14.7395 2.91646 14.63 3L8.63003 7.83C8.44495 7.95552 8.22313 8.01537 8.00003 8Z"
+											fill="#C6C5C5"
+										/>
+									</svg>
+								</figure>
+							</div>
+							<ul class="signup__select-list">
+								<li class="signup__select-item">Los-Angeles</li>
+								<li class="signup__select-item">New-York</li>
+								<li class="signup__select-item">Chicago</li>
+							</ul>
+						</div>
+						<div class="signup__radio">
+							<label class="signup__radio-label" for="male">
+								<input class="signup__radio-field" type="radio" id="male" name="gender" />
+								<p class="signup__radio-text">Male</p>
+							</label>
+							<label class="signup__radio-label" for="female">
+								<input class="signup__radio-field" type="radio" id="female" name="gender" />
+								<p class="signup__radio-text">Female</p>
+							</label>
+						</div>
+						<label class="signup__checkbox-label" for="policy">
+							<input class="signup__checkbox-field" type="checkbox" id="policy" />
+							<p class="signup__checkbox-text">By creating an account you are agreeing to our Terms and Conditions and Privacy Policy</p>
+						</label>
+						<input class="signup__submit" type="submit" value="Create Account" />
+					</form>
+					<p class="signup__footer-text">
+						Already have an account?
+						<a class="signup__footer-link" href="#" target="_blank">Log in</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<script src="./index.js"></script>
+	</body>
+</html>

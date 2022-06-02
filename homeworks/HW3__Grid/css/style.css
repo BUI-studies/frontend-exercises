@@ -27,6 +27,16 @@ body {
 	color: #4f5665;
 }
 
+.primary__link {
+	display: inline-block;
+	padding: 18px 91px;
+
+	border-radius: 10px;
+	line-height: 25px;
+	color: #ffffff;
+	background: #8cc5f9;
+}
+
 .navigation {
 	display: grid;
 	grid-auto-flow: column;
@@ -242,16 +252,14 @@ body {
 
 	line-height: 30px;
 
-	box-shadow: 0px 0px 0px 2px #8cc5f9;
+	border: 2px solid;
 	border-radius: 47px;
 	color: #8cc5f9;
 
-	transition: color 0.5s linear, background-color 0.5s linear, box-shadow 0.5s linear;
+	transition: color 0.5s linear, background-color 0.5s linear;
 }
 
 .product__item-link:hover {
-	box-shadow: none;
-
 	background-color: #878abc;
 	color: #fff;
 }
@@ -299,7 +307,7 @@ body {
 }
 
 .customers::-webkit-scrollbar-track {
-	background: #f5fafe;
+	background-color: #f5fafe;
 }
 
 .customers::-webkit-scrollbar-thumb {
@@ -405,16 +413,6 @@ body {
 .jobs__text {
 	line-height: 30px;
 	color: #4f5665;
-}
-
-.primary-link {
-	display: inline-block;
-	padding: 18px 91px;
-
-	border-radius: 10px;
-	line-height: 25px;
-	color: #ffffff;
-	background: #8cc5f9;
 }
 
 .bottom-bg {
