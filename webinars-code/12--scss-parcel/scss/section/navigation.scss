@@ -1,0 +1,116 @@
+@import '../mixins.scss';
+
+.navigation-wrapper {
+  position: relative;
+  @include flex(center, space-between, row);
+  padding-top: 31px;
+  padding-bottom: 31px;
+}
+
+.burger {
+  width: 22px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.burger::-webkit-details-marker {
+  display: none;
+  appearance: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+.burger__line {
+  border-radius: 2px;
+  border: 1px solid var(--light-grey);
+}
+
+.burger__line:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+#nav {
+  box-sizing: border-box;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 154px;
+  padding: 30px 14px 30px 26px;
+  border-radius: 20px 0px 0px 20px;
+  background: var(--dark-purple);
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.navigation-list__link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.navigation-btn {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 50%;
+  padding: 1px 0 2px;
+
+  text-decoration: none;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: var(--light-grey);
+  border: 1px solid var(--light-grey);
+}
+
+.navigation-btn--accent {
+  background-color: var(--pink);
+  border-color: var(--pink);
+}
+
+// @media screen and (min-width: 1024px) {
+@include mqUP (lg) {
+  .burger {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1;
+  }
+  #nav {
+    position: static;
+    width: auto;
+    display: flex;
+    align-items: center;
+    background-color: initial;
+  }
+  .navigation-list__item {
+    width: max-content;
+  }
+  .navigation-list {
+    flex-direction: row;
+    column-gap: 40px;
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+  .navigation-list__link {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .navigation-btn {
+    width: auto;
+    font-size: 14px;
+    line-height: 21px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
