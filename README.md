@@ -16,3 +16,5 @@ Links to the code from webinars:
 * [animations](webinars-code/09--animations/)
 * [media queries](webinars-code/10--media-queries/)
 * [media queries practice](webinars-code/11--media-queries-practice/)
+* [SCSS and Parcel](webinars-code/12--scss-parcel/)
+* [Project One](webinars-code/13--first-project/)
