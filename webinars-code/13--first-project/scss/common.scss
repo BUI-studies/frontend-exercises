@@ -14,5 +14,20 @@ $light-orange: #f6b76f;
   box-sizing: border-box;
   max-width: 1280px;
   width: 100%;
-  padding: 20px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.desktop-only {
+  display: none;
+
+  @include media(lg) {
+    display: inherit;
+  }
+}
+
+.mobile-only {
+  @include media(lg) {
+    display: none;
+  }
 }

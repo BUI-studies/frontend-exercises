@@ -3,12 +3,26 @@
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-  background: url(../img/hero-bg__mobile.jpg) center no-repeat;
+  background: linear-gradient(to top, $white 0%, transparent 20vh),
+    url(../img/hero-bg__mobile.jpg) center no-repeat;
   background-size: cover;
+
+  @include media(md) {
+    background: linear-gradient(to top, $white 0%, transparent 20vh),
+      url(../img/hero-bg__desktop.jpg) center no-repeat;
+    background-size: cover;
+  }
 }
 
 .top-nav {
   @include flex(center, space-between);
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include media(md) {
+    padding-top: 47px;
+    padding-bottom: 47px;
+  }
 
   &__company {
     font-weight: 700;
@@ -31,6 +45,13 @@
     width: 25.5px;
     height: 23.3px;
     margin-right: 37px;
+
+    @include media(md) {
+      height: 28.33px;
+    }
+    @include media(lg) {
+      margin-right: 0;
+    }
   }
 
   &__counter {
@@ -45,6 +66,59 @@
     background-color: $orange;
     border-radius: 50%;
     outline: 4px solid $orange;
+  }
+}
+
+.desktop-nav {
+  position: relative;
+  align-items: center;
+  gap: 60px;
+
+  @include media(lg) {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+
+    &:hover .desktop-nav__sublist {
+      appearance: initial;
+      opacity: 1;
+      pointer-events: initial;
+      top: 26px;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: $white;
+  }
+
+  &__sublist {
+    position: absolute;
+    top: -500px;
+
+    appearance: none;
+    opacity: 0;
+    pointer-events: none;
+
+    padding: 12px;
+    width: 99px;
+    @include flex(stretch, stretch, column);
+    background-color: $white;
+    transition: opacity 1s, top 0.3s;
+  }
+
+  &__sublink {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.6;
+    color: $black;
   }
 }
 
@@ -150,6 +224,13 @@
     letter-spacing: -0.01em;
     text-transform: capitalize;
     color: $white;
+
+    @include media(sm) {
+      font-size: 32px;
+    }
+    @include media(md) {
+      font-size: 80px;
+    }
   }
 
   &__subtitle {
@@ -159,11 +240,22 @@
     color: $white;
     margin: 29px 0;
     opacity: 0.4;
+
+    @include media(md) {
+      width: 606px;
+      font-size: 24px;
+      margin: 14px auto 45px;
+    }
   }
 }
 
 .searchbar {
   position: relative;
+
+  @include media(md) {
+    width: 334px;
+    margin: 0 auto;
+  }
 
   & input {
     width: 100%;
