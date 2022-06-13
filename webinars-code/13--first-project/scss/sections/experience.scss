@@ -12,6 +12,7 @@
 
     @include media(lg) {
       padding: 0;
+      max-width: 550px;
     }
   }
 
@@ -21,7 +22,6 @@
     }
 
     & picture {
-      display: block;
       padding: 0 20px;
 
       @include media(lg) {

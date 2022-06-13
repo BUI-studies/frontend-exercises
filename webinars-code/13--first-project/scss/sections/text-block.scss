@@ -6,11 +6,13 @@
   @include media(lg) {
     flex-direction: row;
     gap: 0;
+    align-items: center;
   }
 
   &--reverse {
     @include media(lg) {
       flex-direction: row-reverse;
+      justify-content: flex-end;
     }
   }
 

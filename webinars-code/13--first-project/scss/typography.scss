@@ -9,6 +9,10 @@
       font-size: 42px;
       line-height: 63px;
     }
+
+    &--centered {
+      text-align: center;
+    }
   }
 
   &-highlight {
@@ -47,5 +51,9 @@
     content: url(../img/arrow-right.svg);
     line-height: 10px;
     margin-left: 11.5px;
+  }
+
+  &--bigger {
+    font-size: 18px;
   }
 }
