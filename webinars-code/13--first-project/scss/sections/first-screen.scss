@@ -24,18 +24,6 @@
     padding-bottom: 47px;
   }
 
-  &__company {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 42px;
-    letter-spacing: 0.01em;
-
-    text-transform: capitalize;
-    text-decoration: none;
-
-    color: $white;
-  }
-
   &__pannel {
     @include flex(center);
   }
