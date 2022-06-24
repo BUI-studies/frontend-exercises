@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS basics</title>
+</head>
+
+<body>
+
+  <h2>Sum of two numbers</h2>
+
+  <script>
+    // const firstNumber = Number(prompt('give me the number, dirty animal.'))
+    // const firstNumber = +prompt('give me the number, dirty animal.')
+
+    // if (isNaN(firstNumber)) {
+    //   alert("You picked wrong symbols, dushbag!")
+    // } else {
+    //   let secondNumber = +prompt('give me the second number, dirty animal.')
+
+    //   if (isNaN(secondNumber)) {
+    //     alert("You picked wrong symbols, dushbag!")
+    //   } else {
+    //     let sum = firstNumber + secondNumber
+    //     // let msg = `${firstNumber} + ${secondNumber} = ${sum}`
+    //     let msg = firstNumber + ' + ' + secondNumber + ' = ' + sum
+
+    //     alert(msg)
+    //   }
+    // }
+
+    // ---------------- with cycles ---------------
+    let firstNumber = prompt('give me the number, dirty animal.')
+
+    while (isNaN(+firstNumber) || firstNumber === null) {
+      alert("You picked wrong symbols, dushbag!")
+      firstNumber = prompt('give me the number, dirty animal. again.')
+    }
+
+    let secondNumber = prompt('give me the second number, dirty animal.')
+
+    while (isNaN(+secondNumber) || secondNumber === null) {
+      alert("You picked wrong symbols, dushbag!")
+      secondNumber = prompt('give me the number, dirty animal. again.')
+    }
+
+    let sum = +firstNumber + +secondNumber
+    // let msg = `${firstNumber} + ${secondNumber} = ${sum}`
+    let msg = firstNumber + ' + ' + secondNumber + ' = ' + sum
+    alert(msg)
+
+
+  </script>
+</body>
+
+</html>
