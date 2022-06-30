@@ -7,7 +7,13 @@ Links to to pactice:
 - html basics:
   1. [HTML або ХТМЛ або просто розмітка](html-basics/practice-1.md)
 
-Links to the code from webinars:
+### JS webinars
+
+- [logical boock to js](webinars-code/JS/02--logical-blocks-to-js)
+- [js basic syntax](webinars-code/JS/03--js-basics-practice/)
+- [js function](webinars-code/JS/04--js-functions/)
+
+### HTML-CSS webinars:
 
 - [html basics](webinars-code/HTML-CSS/01--html-basics)
 - [css basics](webinars-code/HTML-CSS/02--css-basics/)
