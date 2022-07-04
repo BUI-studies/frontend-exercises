@@ -12,6 +12,7 @@ Links to to pactice:
 - [logical boock to js](webinars-code/JS/02--logical-blocks-to-js)
 - [js basic syntax](webinars-code/JS/03--js-basics-practice/)
 - [js function](webinars-code/JS/04--js-functions/)
+- [js objects](webinars-code/JS/05--objects/)
 
 ### HTML-CSS webinars:
 
