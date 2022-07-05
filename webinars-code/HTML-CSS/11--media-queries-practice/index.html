@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries Practice</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="general-bg">
+      <header class="navigation-wrapper container">
+        <picture class="company">
+          <source srcset="./img/company.svg" media="(min-width: 768px)" />
+          <img src="./img/company--mob.svg" alt="company" />
+        </picture>
+
+        <details class="navigation">
+          <summary class="burger">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+          </summary>
+          <div id="nav">
+            <menu class="navigation-list">
+              <li class="navigation-list__item">
+                <a href="#" class="navigation-list__link">EXERCICES</a>
+              </li>
+              <li class="navigation-list__item">
+                <a href="#" class="navigation-list__link">COMMUNITY</a>
+              </li>
+              <li class="navigation-list__item">
+                <a href="#" class="navigation-list__link">PRICING</a>
+              </li>
+              <li class="navigation-list__item">
+                <a href="#" class="navigation-list__link">ABOUT US</a>
+              </li>
+            </menu>
+            <a href="#" class="navigation-btn navigation-btn--accent">LOGIN</a
+            ><a href="#" class="navigation-btn">SIGN IN</a>
+          </div>
+        </details>
+      </header>
+      <section class="hero-wrapper container">
+        <picture class="hero__banner">
+          <source srcset="./img/woman-in-gym.jpg" media="(min-width:1024px)" />
+          <img src="./img/woman--mob.jpg" alt="woman in gym" />
+        </picture>
+        <div class="hero__info">
+          <h1 class="hero__title">
+            4 WEEK <span class="hero__title--smaller">Workout Plan</span>
+          </h1>
+          <p class="hero__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            fringilla, lacus eget consequat tincidunt, lectus ex bibendum
+            libero, eget iaculis quam arcu quis mauris. Donec ex neque, egestas
+            in faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Maecenas
+          </p>
+          <a href="#" class="primary-btn">TRY FOR FREE</a>
+        </div>
+        <div class="hero-card">
+          <h2 class="hero-card__header">GET INSPIRED</h2>
+          <p class="hero-card__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            fringil. lacus eget consequat tincidunt, lectus ex.
+          </p>
+          <a href="#" class="hero-card__btn">
+            <figure class="hero-card__arrow">
+              <svg
+                width="11"
+                height="11"
+                viewBox="0 0 11 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.464871 9.50128C0.169327 9.7915 0.169327 10.262 0.464871 10.5523C0.760415 10.8425 1.23959 10.8425 1.53513 10.5523L0.464871 9.50128ZM10.9492 1C10.9492 0.589573 10.6104 0.256853 10.1924 0.256853H3.38131C2.96334 0.256853 2.62452 0.589573 2.62452 1C2.62452 1.41044 2.96334 1.74316 3.38131 1.74316H9.4356V7.68836C9.4356 8.09879 9.77443 8.43151 10.1924 8.43151C10.6104 8.43151 10.9492 8.09879 10.9492 7.68836V1ZM1.53513 10.5523L10.7275 1.52549L9.65726 0.474517L0.464871 9.50128L1.53513 10.5523Z"
+                  fill="#F2F2F2"
+                />
+              </svg>
+            </figure>
+            Explore More
+          </a>
+        </div>
+        <div class="hero-card">
+          <h2 class="hero-card__header">CHALLENGE YOURSELF</h2>
+          <p class="hero-card__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            fringil. lacus eget consequat tincidunt, lectus ex.
+          </p>
+          <a href="#" class="hero-card__btn">
+            <figure class="hero-card__arrow">
+              <svg
+                width="11"
+                height="11"
+                viewBox="0 0 11 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.464871 9.50128C0.169327 9.7915 0.169327 10.262 0.464871 10.5523C0.760415 10.8425 1.23959 10.8425 1.53513 10.5523L0.464871 9.50128ZM10.9492 1C10.9492 0.589573 10.6104 0.256853 10.1924 0.256853H3.38131C2.96334 0.256853 2.62452 0.589573 2.62452 1C2.62452 1.41044 2.96334 1.74316 3.38131 1.74316H9.4356V7.68836C9.4356 8.09879 9.77443 8.43151 10.1924 8.43151C10.6104 8.43151 10.9492 8.09879 10.9492 7.68836V1ZM1.53513 10.5523L10.7275 1.52549L9.65726 0.474517L0.464871 9.50128L1.53513 10.5523Z"
+                  fill="#F2F2F2"
+                />
+              </svg>
+            </figure>
+            Explore More
+          </a>
+        </div>
+      </section>
+      <!-- <section class="container">
+        <div class="section-head">
+          <h2 class="section-head__title">latest training</h2>
+          <a href="#" class="section-head__link">SEE MORE HERE</a>
+        </div>
+        <div class="trainig-list">
+          <div class="training-card">
+            <figure class="training-card__img">
+              <img src="./img/RUNNING.jpg" alt="running" />
+            </figure>
+            <h3 class="training-card__title">running</h3>
+            <p class="training-card__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              fringilla, lacus eget consequat
+            </p>
+            <a href="#" class="primary-btn primary-btn--small"> SEE MORE </a>
+          </div>
+        </div>
+      </section> -->
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+// $breakpoints: ("xs": 320px, "md": 467px, "lg": 1024px);
+
+@mixin flex ($align, $justify, $direction:gogi) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    @if ($direction != gogi) {
+        flex-direction: $direction;
+    }
+}
+
+@mixin mqUP ($w) {
+    // $resolution: map-get($breakpoints, $w);
+    // @media screen and (min-width: $resolution) {
+    @media screen and (min-width: $w) {
+        @content
+    }
+}
+
+@mixin sizes ($w:none, $h:none) {
+    @if ($w != none) {
+        width: $w;
+    }
+    @if ($h != none) {
+        height: $h;
+    }
+}
+
+@mixin sizes2 ($w:none, $h:none) {
+    @if ($w != none) {
+        max-width: $w;
+        width: 100%;
+    }
+    @if ($h != none) {
+        max-height: $h;
+        height: 100%;
+    }
+}
+
+@function calcColumnWidth ($columns, $gap) {
+    @return calc(100% / $columns - $columns * $gap / ($columns - 1))
+}
+
+.block {
+    @include flex(center, space-between)
+}
+
+.child {
+    box-sizing: border-box;
+    width: calcColumnWidth(3, 50px);
+    padding: 50px;
+    background-color: teal;
+}

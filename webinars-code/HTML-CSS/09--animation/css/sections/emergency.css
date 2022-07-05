@@ -1,0 +1,43 @@
+.emergency-steps-wrapper {
+  padding: 50px 0;
+}
+
+.emergency-steps {
+  margin-top: 50px;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(4, 165px);
+  grid-auto-columns: minmax(165px, 165px);
+  grid-gap: 55px 30px;
+  justify-content: center;
+}
+
+.emergency-steps__item {
+  padding: 30px 16px;
+  display: grid;
+  grid-template-rows: 58px 1fr;
+  justify-items: center;
+  text-align: center;
+
+  border-radius: 20px;
+  border: 1px solid #4a607a;
+  box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+}
+
+.emergency-steps__text {
+  font-size: 14px;
+  line-height: 16px;
+
+  margin-top: 20px;
+}
+
+.emergency-steps__content {
+  grid-column: 1 / span 4;
+  grid-row: 2 / span 1;
+
+  padding: 40px 20px;
+
+  box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+  border-radius: 13px;
+}

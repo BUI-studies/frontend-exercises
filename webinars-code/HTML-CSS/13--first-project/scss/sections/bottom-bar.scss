@@ -1,0 +1,122 @@
+.bottom-bar {
+  padding-top: 60px;
+  padding-bottom: 13px;
+  background-color: $light-grey;
+
+  @include media(lg) {
+    padding-top: 118px;
+    padding-bottom: 55px;
+  }
+
+  & .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 42px;
+    column-gap: 45px;
+
+    @include media(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include media(lg) {
+      row-gap: 120px;
+      grid-template-columns: 2fr repeat(3, 1fr);
+    }
+  }
+
+  &__top-side {
+    grid-column: 1 / span 2;
+
+    @include media(sm) {
+      grid-column: 1 / span 3;
+    }
+    @include media(lg) {
+      grid-column: 1 / span 1;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 22px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include media(lg) {
+      width: fit-content;
+      justify-self: end;
+    }
+  }
+
+  &__highlight {
+    @extend .bottom-bar__link;
+    color: $orange;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.8;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    & img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+
+  &__terms {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 16px;
+
+    @include media(sm) {
+      grid-column: 1 / span 3;
+      flex-direction: row;
+      justify-content: center;
+    }
+    @include media(lg) {
+      grid-column: 2 / span 3;
+      grid-row: 2 / span 1;
+      justify-content: flex-end;
+    }
+  }
+
+  &__copy {
+    grid-column: 1 / span 2;
+    margin-top: 45px;
+
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.204545px;
+    opacity: 0.4;
+
+    @include media(sm) {
+      grid-column: 1 / span 3;
+      margin-top: 0;
+    }
+    @include media(lg) {
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+      text-align: left;
+    }
+  }
+}

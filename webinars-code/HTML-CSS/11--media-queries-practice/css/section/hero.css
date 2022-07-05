@@ -1,0 +1,154 @@
+.hero-wrapper {
+  padding-top: 63px;
+  padding-bottom: 50px;
+}
+
+.hero__banner {
+  display: inline-block;
+  width: 100%;
+  height: 283px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
+
+.hero__banner img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero__info {
+  text-align: center;
+}
+
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.215em;
+}
+
+.hero__title--smaller {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.hero__text {
+  margin: 9px 0 54px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+
+  opacity: 0.36;
+}
+
+.hero-card {
+  display: none;
+  pointer-events: none;
+  appearance: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+.hero-card__header {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.hero-card__text {
+  margin: 14px 0 18px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  opacity: 0.36;
+}
+
+.hero-card__btn {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.hero-card__arrow {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--pink);
+}
+.hero-card__arrow svg {
+  transform: translateX(-1px);
+}
+
+@media screen and (min-width: 768px) {
+  .hero__banner {
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-wrapper {
+    display: grid;
+    grid-template-columns: minmax(300px, 422px) 1fr 1.1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 30px;
+  }
+  .hero__banner {
+    height: 100%;
+    margin-bottom: 0;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+  }
+  .hero__banner img {
+    height: 100%;
+  }
+  .hero__info {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: left;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+  }
+  .hero__title {
+    text-align: left;
+    font-size: 64px;
+  }
+  .hero__title--smaller {
+    font-size: 29px;
+    line-height: 44px;
+  }
+  .hero__text {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .hero-card {
+    display: block;
+    padding: 30px 26px 20px;
+
+    opacity: 1;
+    pointer-events: initial;
+    appearance: initial;
+    z-index: initial;
+
+    border-radius: 10px;
+    background-color: var(--semi-black);
+  }
+}

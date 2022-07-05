@@ -1,0 +1,18 @@
+{
+  "name": "12--scss-parcel",
+  "version": "1.0.0",
+  "description": "",
+  "browserslist": ["> 0.002%", "last 100 versions", "not dead"],
+  "scripts": {
+    "start": "parcel ./index.html",
+    "prod": "parcel build ./index.html --public-url ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0"
+  }
+}

@@ -1,0 +1,91 @@
+:root {
+  --accent: #d9852c;
+  --white: #fff;
+  --black: #000000;
+  --grey: #b7b7b7;
+  --light-grey: #ddd;
+  --tb: 1024;
+}
+
+body::-webkit-scrollbar {
+  width: 0.45em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+
+.block {
+  padding-top: 90px;
+  padding-bottom: 60px;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.hero-bg {
+  height: 100vh;
+  background: linear-gradient(
+      to top,
+      rgba(33, 33, 33, 0.5),
+      rgba(33, 33, 33, 0.5)
+    ),
+    url(../img/painting_bg.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.action-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 27px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--white);
+
+  border: 2px solid var(--white);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 477px) {
+  .section-title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .container {
+    padding: 0 32px;
+  }
+  .block {
+    padding-top: 78px;
+    padding-bottom: 43px;
+  }
+  .section-title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
