@@ -16,7 +16,7 @@ console.log(without(data, 'address',)) // { login: 'gogi', password: 'GloryOfUkr
 
 
 ## TASK-02
-Написати функцію `profileMagazie`, яка повертає обʼєкт інтернет-магазину з додатковими методами по роботі з ним.
+Написати функцію `profileMagazine`, яка повертає обʼєкт інтернет-магазину з додатковими методами по роботі з ним.
 
 #### Arguments:
 - _label_ - назва магазину
