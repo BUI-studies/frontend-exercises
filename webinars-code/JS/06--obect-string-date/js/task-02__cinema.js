@@ -1,3 +1,26 @@
+function createMoovie(title, schedule, ticketPrice, seets = 32) {
+  const moovie = {
+    title: title,
+    schedule: schedule,
+    price: ticketPrice,
+    seets,
+
+    /**
+     * @param {number} discount - number bigger then 0 and less then 1 for calculateing new prices
+     */
+    makeSale: function (discount) {
+      if (discount <= 0 || discount >= 1) {
+        console.error("Wrong argument type. Should be > 0 and < 1");
+        return null;
+      }
+
+      this.price = this.price * discount;
+    },
+  };
+
+  return moovie;
+}
+
 /**
  * TASK-02
  *
@@ -25,8 +48,15 @@ function cinema(name, address, defaultFilmsStock = []) {
     return sum;
   };
 
-  const releaseFilm = function (filmToRelease) {
-    this.filmsRelease = filmToRelease;
+  const releaseFilm = function () {
+    const today = new Date();
+
+    if (today.getDay() === 4) {
+      const randomIndex = Math.floor(
+        Math.random() * (this.filmsStock.length - 1)
+      );
+      this.filmsRelease = this.filmsStock[randomIndex];
+    }
   };
 
   return {
@@ -48,6 +78,9 @@ const imaxFilmStore = [
 ];
 
 const imax = cinema("IMAX", "in the middle of nowhere", imaxFilmStore);
+imax.releaseFilm();
+
+console.log(imax);
 
 const allCosts = imax.summAllTickets();
 console.log(allCosts);
