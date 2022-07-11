@@ -13,6 +13,7 @@ Links to to pactice:
 - [js basic syntax](webinars-code/JS/03--js-basics-practice/)
 - [js function](webinars-code/JS/04--js-functions/)
 - [js objects](webinars-code/JS/05--objects/)
+- [objects, string, date and time](webinars-code/JS/06--objects-string-date/)
 
 ### HTML-CSS webinars:
 
