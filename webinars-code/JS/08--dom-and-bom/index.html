@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM and BOM</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      max-width: 1280px;
+      padding: 0 20px;
+      margin: 0 auto;
+    }
+
+    .page-text {
+      font-size: 16px;
+      color: #333;
+      margin: 20px 0;
+    }
+
+    .page-text a {
+      color: #d4d;
+    }
+
+    .page-text-active {
+      font-size: 18px;
+      color: #92e;
+    }
+
+    .page-link {
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 6px;
+      background-color: #3f3f3f;
+      color: #f3f3f3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="page-title" id="title">DOM and BOM</h1>
+    <!-- this is a comment -->
+
+    <div class="profile">
+      <h3 class="profile__name"></h3>
+      <div class="profile__info">
+        <p id="sex"></p>
+        <p id="age"></p>
+        <p id="preferences"></p>
+      </div>
+      <p class="profile__about"></p>
+    </div>
+
+    <p class="page-text">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima vitae, eum quaerat debitis
+      voluptate <a href="#">saepe harum</a> accusamus laborum nostrum placeat perferendis. Eligendi officia eveniet
+      accusantium totam ut blanditiis maxime voluptatem nesciunt error ducimus ipsum quibusdam et ad voluptatibus
+      ratione
+      ipsa voluptates cum, veniam eos ullam?
+    </p>
+
+    <p class="page-text">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima vitae, eum quaerat debitis
+      voluptate saepe harum accusamus laborum nostrum placeat perferendis. Eligendi officia eveniet
+      accusantium totam ut blanditiis maxime voluptatem nesciunt error ducimus ipsum quibusdam et ad voluptatibus
+      ratione
+      ipsa <a href="#" name="namedLink">voluptates</a> cum, veniam eos ullam?
+    </p>
+
+    <a href="#" class="page-link">Contact us</a>
+    <a href="#" class="page-link">Search on the map</a>
+    <a href="#" class="page-link">Apply for a job</a>
+  </div>
+
+  <p class="page-title">DOM and BOM</p>
+
+  <!-- <script src="./js/examples.js"></script> -->
+  <!-- <script src="./js/task-01.js"></script> -->
+  <!-- <script src="./js/task-02.js"></script> -->
+  <script src="./js/task-03.js"></script>
+</body>
+
+</html>
