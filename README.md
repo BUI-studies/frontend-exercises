@@ -14,6 +14,9 @@ Links to to pactice:
 - [js function](webinars-code/JS/04--js-functions/)
 - [js objects](webinars-code/JS/05--objects/)
 - [objects, string, date and time](webinars-code/JS/06--objects-string-date/)
+- [arrays](webinars-code/JS/07--arrays/)
+- [DOM and BOM - finding elements](webinars-code/JS/08--dom-and-bom/)
+- [DOM - create, update and remove elements](webinars-code/JS/09--dom-create-delete/)
 
 ### HTML-CSS webinars:
 
