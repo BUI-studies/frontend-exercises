@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Events</title>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .tabs__item {
+      margin: 10px 0;
+    }
+
+    .tabs__item--active {
+      background-color: darkred;
+      color: #f3f3f3;
+    }
+
+    .tabs-content__item {
+      display: none;
+    }
+
+    .tabs-content__item--active {
+      display: block;
+    }
+
+    .follow-cursor {
+      position: absolute;
+    }
+
+    .follow-cursor--delay {
+      transition: top 0.2s, left 0.2s;
+    }
+
+    .illustration {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="btnsList">
+    <button id="clickMe">Click me</button>
+    <button id="hitMe">Hit me</button>
+    <button id="pushMe">Push me</button>
+  </div>
+  <main class="container">
+    <ul class="tabs">
+      <li class="tabs__item tabs__item--active" data-tab="gogi">Gogi</li>
+      <li class="tabs__item" data-tab="loves">Loves</li>
+      <li class="tabs__item" data-tab="to">To</li>
+      <li class="tabs__item" data-tab="code">Code</li>
+    </ul>
+    <div class="tabs-content">
+      <div class="tabs-content__item tabs-content__item--active" data-tab="gogi">1 -Lorem ipsum dolor sit amet
+        consectetur
+        adipisicing elit. Delectus
+        quam vel
+        architecto minima nemo labore animi blanditiis enim facere quaerat obcaecati fugiat necessitatibus voluptates
+        dolor suscipit natus officia repellendus accusantium nostrum, laborum deleniti provident, amet nesciunt illum.
+        Ipsa pariatur illo quisquam! Unde quae impedit dolores? Molestiae illum corporis corrupti at quasi assumenda non
+        optio! Quod illum corrupti consequuntur alias sed necessitatibus commodi vel, natus quia expedita. Velit id
+        veritatis rerum ratione atque? Nisi laborum, illum, nulla amet suscipit fuga id voluptates earum autem deserunt
+        eaque temporibus veritatis, aliquam aliquid saepe vel cumque harum repellendus natus laboriosam asperiores?
+        Officia, totam quibusdam!</div>
+      <div class="tabs-content__item" data-tab="loves">2 -Modi, dolor voluptate eum consequuntur excepturi expedita quis
+        ut
+        officiis
+        dignissimos sint. Dolor provident quo, ipsa minus corrupti suscipit veniam sit recusandae est maxime blanditiis
+        quia dignissimos aut reprehenderit laborum magnam esse aliquid maiores iste dolores fuga sunt voluptate!
+        Blanditiis, id. Nesciunt, tempora nam. Hic recusandae vel, facere consequuntur, tempora nulla repellat
+        perferendis soluta rem culpa dolorum enim excepturi debitis adipisci ab blanditiis. Amet mollitia eveniet, quod
+        explicabo esse error impedit dignissimos nobis, eius perspiciatis ad quas autem molestias quae iste laboriosam
+        saepe? Eius impedit, corporis magnam tenetur nisi, eum voluptate soluta rem omnis placeat vero ullam
+        exercitationem error? Deserunt!</div>
+      <div class="tabs-content__item" data-tab="to">3 -Nesciunt dignissimos enim laudantium fuga porro necessitatibus
+        dolorem,
+        blanditiis, sint iste maxime quisquam, odit nostrum at temporibus neque soluta quo quas maiores sed illo
+        commodi. Blanditiis dicta, in laboriosam distinctio tempore quibusdam, aliquid earum consequuntur illo, adipisci
+        impedit eius debitis delectus. Quis saepe mollitia, tenetur cumque neque fugiat architecto, excepturi tempora
+        optio blanditiis, eaque recusandae dolores? Itaque, ea. Inventore quia voluptatum labore. Ipsa fugiat iusto aut,
+        hic velit, ipsum ea sed obcaecati, quas suscipit odio praesentium cum assumenda iste eligendi quaerat accusamus
+        consequatur omnis animi voluptate itaque nesciunt atque? Nostrum molestiae quia incidunt dolore quaerat debitis
+        voluptate beatae assumenda rem.</div>
+      <div class="tabs-content__item" data-tab="code">4 -Adipisci delectus voluptatum deleniti praesentium quod fuga
+        incidunt ullam rerum
+        non, fugiat quibusdam recusandae sapiente quis odio maiores officiis eveniet aliquid nostrum illum. Explicabo
+        quo nam aliquam voluptatem nemo non voluptatum obcaecati dicta et temporibus, tempore eos expedita qui
+        accusantium. Repellat perferendis rerum impedit facere distinctio ab. Deleniti voluptate similique, at
+        perferendis minima laboriosam consectetur ad soluta unde! Quidem laudantium unde iusto officiis fugit ex
+        assumenda quas officia. Porro omnis pariatur placeat voluptates animi dignissimos sunt ut optio, inventore
+        explicabo excepturi atque iusto aliquam nemo iste, cupiditate repellendus eaque! In debitis enim nihil numquam
+        maxime. Deserunt ex architecto eveniet sequi.</div>
+    </div>
+  </main>
+
+
+  <!-- <script src=" ./js/examples.js"></script> -->
+  <!-- <script src="./js/task-01.js"></script> -->
+  <!-- <script src="./js/task-02.js"></script> -->
+  <script src="./js/task-03.js"></script>
+</body>
+
+</html>
