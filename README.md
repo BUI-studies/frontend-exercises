@@ -19,6 +19,7 @@ Links to to pactice:
 - [DOM - create, update and remove elements](webinars-code/JS/09--dom-create-delete/)
 - [DOM - mouse events](webinars-code/JS/10--mouse-events/)
 - [DOM - kayboard events](webinars-code/JS/11--keyboard-events/)
+- [DOM events (practice)](webinars-code/JS/12--events-practice/)
 
 ### HTML-CSS webinars:
 
