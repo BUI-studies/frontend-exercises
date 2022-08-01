@@ -20,6 +20,7 @@ Links to to pactice:
 - [DOM - mouse events](webinars-code/JS/10--mouse-events/)
 - [DOM - kayboard events](webinars-code/JS/11--keyboard-events/)
 - [DOM events (practice)](webinars-code/JS/12--events-practice/)
+- [Advanced Events](webinars-code/JS/13--advanced-events/)
 
 ### HTML-CSS webinars:
 
