@@ -1,46 +1,57 @@
-// const parentElement = document.getElementById("parent");
-// const link = document.querySelector(".page-link");
+// const buttonSend = document.querySelector("#btn");
 
-// parentElement.addEventListener(
-//   "click",
-//   (ev) => {
-//     console.log(ev.target, ev.currentTarget);
-//     alert("You clicked on the parent element");
-//   },
-//   true
-// );
+// buttonSend.addEventListener("click", () => {
+//   const input = document.getElementById("message");
+//   const delay = document.getElementById("delay");
+//   const text = input.value;
 
-// link.addEventListener(
-//   "click",
-//   (ev) => {
-//     console.log(ev.target, ev.currentTarget);
-//     alert("You clicked on the link");
-//     ev.stopPropagation();
-//   },
-//   true
-// );
+//   setTimeout(() => {
+//     alert(text);
+//   }, delay);
+// });
 
-const modalBtn = document.getElementById("modal");
+// const intervalCounter = (end) => {
+//   let counter = 0;
 
-modalBtn.addEventListener("click", (ev) => {
-  const modalWindow = document.createElement("div");
+//   const counterId = setInterval(() => {
+//     if (counter >= end) {
+//       clearInterval(counterId);
+//     }
 
-  modalWindow.classList.add("modal");
+//     console.log(++counter);
+//   }, 1000);
 
-  modalWindow.insertAdjacentHTML(
-    "afterbegin",
-    `<div class="modal-content">
-      <h2>Gogi just got fired!</h2>
-      <button>Ok</button>
-      <button>Cancel</button>
-    </div>`
-  );
+//   console.log("code line after interval declaration");
+// };
 
-  modalWindow.addEventListener("click", (ev) => {
-    if (ev.target.classList.contains("modal")) {
-      ev.currentTarget.remove();
-    }
-  });
+// intervalCounter(12);
 
-  ev.target.after(modalWindow);
+const saveBtn = document.getElementById("saveBtn");
+const userName = document.getElementById("userName");
+const theme = document.getElementById("theme");
+
+const userInfo = localStorage.getItem("userInfo");
+
+// if (userNameVal) {
+//   userName.value = userNameVal;
+//   userName.disabled = true;
+// } else {
+//   userName.disabled = false;
+
+//   saveBtn.addEventListener("click", () => {
+//     localStorage.setItem("userName", userName.value);
+//     alert("User name successfully saved");
+//   });
+// }
+
+saveBtn.addEventListener("click", () => {
+  const userInfo = {
+    userName: userName.value,
+    theme: theme.value,
+  };
+
+  sessionStorage.setItem("userInfo", JSON.stringify(userInfo));
 });
+
+const storageValue = JSON.parse(sessionStorage.getItem("userInfo"));
+console.log(storageValue);

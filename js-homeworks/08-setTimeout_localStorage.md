@@ -7,7 +7,7 @@
 
 #### Arguments функції `startTimer`:
 
-- _dateToEvent_ - дата у форматі строки ("01-09-2022")
+- _eventDate_ - дата у форматі строки ("01-09-2022")
 
 #### Return value
 

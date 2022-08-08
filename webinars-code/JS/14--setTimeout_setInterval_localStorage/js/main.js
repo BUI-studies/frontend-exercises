@@ -1,10 +1,11 @@
-import { STATUSES } from "./utils.js";
 import Room from "./room.js";
+import { setStorageItem } from "./utils.js";
 
 // import Seat from "./seat.js";
 // const firstOne = new Seat(1, 1, STATUSES.FREE);
 
 const allSeatsContainer = document.querySelector(".seats");
+const bookingBtn = document.querySelector(".action-btn");
 
 // firstOne.render(allSeatsContainer);
 const gogiMoovie = {
@@ -21,3 +22,28 @@ const gogiRoom = new Room(roomSize, gogiMoovie);
 gogiRoom.render(allSeatsContainer);
 
 console.log(gogiRoom);
+
+bookingBtn.addEventListener("click", (event) => {
+  const selectedSeats = gogiRoom.selected;
+  const allSeatsReserved = gogiRoom.selected.reduce(
+    (acc, curr) => `${acc} \n row: ${curr.row}, seat: ${curr.number}`,
+    ""
+  );
+
+  const confirmation = confirm(`Do you want to book: ${allSeatsReserved}?`);
+
+  if (confirmation) {
+    event.target.disabled = true;
+
+    setStorageItem("selected", selectedSeats);
+
+    alert("your booking succesfully completed");
+
+    setTimeout(() => {
+      event.target.disabled = false;
+      gogiRoom.resetAllSeats();
+    }, 5000);
+  } else {
+    alert("Okay. Go home, filthy animal!");
+  }
+});

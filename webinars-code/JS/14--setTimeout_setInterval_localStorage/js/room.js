@@ -1,3 +1,6 @@
+import Seat from "./seat.js";
+import { getStorageItem, setStorageItem, STATUSES } from "./utils.js";
+
 /**
  * Moovie
  * @param {string} title
@@ -7,23 +10,21 @@
  * @param {string} ticketCost
  */
 
-import Seat from "./seat.js";
-import { STATUSES } from "./utils.js";
-
 /**
  * Room
  * @param {number} size
  * @param {Moovie} moovie
  * @param {number} ticketCost
  */
-export default function Room(size, moovie, seatsInRow = 8) {
+export default function Room(size, moovie) {
   this.size = size;
-  this.seatsInRow = seatsInRow;
   this.moovie = moovie;
 
   this.elements = {};
 
   this.render = (seatsList) => {
+    const storageSelectedSeats = getStorageItem("selected");
+
     this.elements.seatsList = seatsList;
     this.elements.selectedSeats = document.querySelector(".results-list");
 
@@ -32,13 +33,22 @@ export default function Room(size, moovie, seatsInRow = 8) {
 
     for (let row = 1; row <= this.size.rows; row++) {
       for (let seat = 1; seat <= this.size.seats; seat++) {
-        const newSeat = new Seat(row, seat);
+        const thisSelectedSeat = storageSelectedSeats?.find(
+          (storageSeat) =>
+            storageSeat.row === row && storageSeat.number === seat
+        );
+        const newSeat = new Seat(row, seat, thisSelectedSeat?.status);
+
+        if (thisSelectedSeat) {
+          this.selected.push(newSeat);
+        }
 
         this.allSeats.push(newSeat);
         newSeat.render(this.elements.seatsList);
       }
     }
 
+    this.updateSelectedSeats();
     this.elements.seatsList.addEventListener("click", (ev) =>
       this.handleClick(ev)
     );
@@ -61,6 +71,7 @@ export default function Room(size, moovie, seatsInRow = 8) {
       this.selected.splice(indexOfclickedSeat, 1);
     }
 
+    setStorageItem("selected", this.selected);
     this.updateSelectedSeats();
   };
 
@@ -77,5 +88,12 @@ export default function Room(size, moovie, seatsInRow = 8) {
       "afterbegin",
       selectedSeatsElements
     );
+  };
+
+  this.resetAllSeats = () => {
+    this.allSeats.forEach((seat) => seat.changeStatus(STATUSES.FREE));
+    this.selected = [];
+    setStorageItem("selected", this.selected);
+    this.updateSelectedSeats();
   };
 }
