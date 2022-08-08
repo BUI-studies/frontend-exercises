@@ -21,6 +21,8 @@ Links to to pactice:
 - [DOM - kayboard events](webinars-code/JS/11--keyboard-events/)
 - [DOM events (practice)](webinars-code/JS/12--events-practice/)
 - [Advanced Events](webinars-code/JS/13--advanced-events/)
+- [setTimeout setInterval localStorage](webinars-code/JS/14--setTimeout_setInterval_localStorage/)
+- [Drag'n'Drop](webinars-code/JS/15--drag-n-drop/)
 
 ### HTML-CSS webinars:
 
