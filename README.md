@@ -14,6 +14,13 @@ Links to to pactice:
 - [js function](webinars-code/JS/04--js-functions/)
 - [js objects](webinars-code/JS/05--objects/)
 - [objects, string, date and time](webinars-code/JS/06--objects-string-date/)
+- [arrays](webinars-code/JS/07--arrays/)
+- [DOM and BOM - finding elements](webinars-code/JS/08--dom-and-bom/)
+- [DOM - create, update and remove elements](webinars-code/JS/09--dom-create-delete/)
+- [DOM - mouse events](webinars-code/JS/10--mouse-events/)
+- [DOM - kayboard events](webinars-code/JS/11--keyboard-events/)
+- [DOM events (practice)](webinars-code/JS/12--events-practice/)
+- [Advanced Events](webinars-code/JS/13--advanced-events/)
 
 ### HTML-CSS webinars:
 

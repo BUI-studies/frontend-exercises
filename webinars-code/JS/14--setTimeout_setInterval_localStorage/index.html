@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gogi cinema</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <nav class="navigation">
+    <div class="container">
+      <a href="#" class="company-logo">
+        <picture class="company-logo__picture">
+          <img src="./img/logo.svg" alt="Gogi cinema" class="company-logo__img">
+        </picture>
+      </a>
+
+      <div class="profile">
+        <a href="#" class="profile__text">
+          Sign in
+        </a>
+
+        <picture class="profile__picture">
+          <img src="./img/profile.svg" alt="profile" class="profile__img">
+        </picture>
+      </div>
+    </div>
+  </nav>
+
+  <button id="btn">Change status</button>
+
+  <main class="container content">
+    <section class="seats">
+    </section>
+    <section class="pannel">
+      <div class="history">
+        <div class="history__item">
+          <div class="history__color history__color--choice"></div>
+          <p class="history__desc">Ваш вибір</p>
+        </div>
+        <div class="history__item">
+          <div class="history__color history__color--free"></div>
+          <p class="history__desc">Вільне</p>
+        </div>
+        <div class="history__item">
+          <div class="history__color history__color--picked"></div>
+          <p class="history__desc">Зайняте</p>
+        </div>
+      </div>
+
+      <p class="results-title">Ваші місця: </p>
+      <ul class="results-list">
+        <!-- <li class="results-list__item">ряд 1 місце 1 </li>
+        <li class="results-list__item">ряд 2 місце 6</li>
+        <li class="results-list__item">ряд 2 місце 7</li>
+        <li class="results-list__item">ряд 3 місце 6</li> -->
+      </ul>
+      <button class="action-btn">
+        Забронювати
+      </button>
+    </section>
+  </main>
+
+  <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>
