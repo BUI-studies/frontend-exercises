@@ -22,3 +22,9 @@
  * - у теці репозиторію виконати команду npm install
  * - запустити команду npm dev або npm start
  */
+
+fetch('http://localhost:8080/api/users')
+  .then(res => res.json())
+  .then(users => {
+    console.log(users)
+  })
