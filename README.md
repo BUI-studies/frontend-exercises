@@ -23,6 +23,7 @@ Links to to pactice:
 - [Advanced Events](webinars-code/JS/13--advanced-events/)
 - [setTimeout setInterval localStorage](webinars-code/JS/14--setTimeout_setInterval_localStorage/)
 - [Drag'n'Drop](webinars-code/JS/15--drag-n-drop/)
+- [fetch, async await](webinars-code/JS/16--fetch-async-await/)
 
 ### HTML-CSS webinars:
 
