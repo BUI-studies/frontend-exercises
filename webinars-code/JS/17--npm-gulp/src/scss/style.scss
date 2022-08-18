@@ -1,0 +1,16 @@
+@import './fonts.scss';
+@import './reset.scss';
+@import './mixins.scss';
+
+@import './common.scss';
+@import './typography.scss';
+
+// ***** SECTIONS *****
+@import './sections/first-screen.scss';
+@import './sections/benefits.scss';
+@import './sections/gallery.scss';
+@import './sections/text-block.scss';
+@import './sections/experience.scss';
+@import './sections/materials.scss';
+@import './sections/testimonials.scss';
+@import './sections/bottom-bar.scss';

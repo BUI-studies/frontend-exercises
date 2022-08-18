@@ -1,0 +1,44 @@
+.benefits {
+  margin-top: 60px;
+
+  @include media(lg) {
+    width: calc(100% - 368px);
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  &-wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include media(lg) {
+      @include flex(center, space-between);
+      gap: 28px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+
+    @include media(lg) {
+      height: 180px;
+      @include flex(stretch, space-between, column);
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    margin-top: 14px;
+    margin-bottom: 18px;
+
+    @include media(lg) {
+      height: 90px;
+      overflow-y: hidden;
+      margin-bottom: 14px;
+    }
+  }
+}
