@@ -15,5 +15,6 @@
     "gulp-clean": "^0.4.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.54.4"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
