@@ -27,5 +27,6 @@
     "sass": "^1.54.5",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
