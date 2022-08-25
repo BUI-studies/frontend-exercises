@@ -1,9 +1,5 @@
-@import './_fonts.scss';
-
-* {
-  font-family: 'PT Sans', sans-serif;
-}
-
-.gogi {
-  display: flex;
-}
+@import './reset';
+@import './_fonts';
+@import './_common';
+@import './sections/navigation';
+@import './sections/fields';

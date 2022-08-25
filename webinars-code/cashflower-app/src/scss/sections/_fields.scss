@@ -1,0 +1,39 @@
+.fields {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  outline: none;
+  border: 1px solid $white-text;
+  border-radius: $small-radius;
+  padding: 13px 16px;
+
+  font-size: 15px;
+  line-height: 15px;
+
+  background-color: $black-bg;
+
+  transition: border-color 0.3s;
+
+  &:focus {
+    border-color: $accent;
+  }
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: $small-radius;
+  background-color: $accent;
+
+  font-size: 15px;
+  line-height: 15px;
+
+  font-weight: 700;
+}

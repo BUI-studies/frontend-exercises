@@ -10,13 +10,27 @@
 </head>
 
 <body>
-  <h1 class="gogi">Gogi gogi gogi</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, qui quis delectus vero assumenda voluptatum
-    expedita, id architecto reprehenderit iusto odit. Rerum numquam qui ipsum? Vero distinctio doloremque amet mollitia.
-  </p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem reiciendis, pariatur, explicabo, officia non
-    corrupti perspiciatis sit ducimus in quasi ex error? Ad illum voluptas aliquam, ipsum laboriosam asperiores quos!
-  </p>
+  <div class="screen">
+    <picture class="screen__bg">
+      <img src="./build/img/cash_flower.png" alt="cash and flower" />
+    </picture>
+
+    <div class="container screen__content">
+      <nav class="navigation">
+        <h1 class="company-logo">CASHFLOWER</h1>
+        <a href="./sign-in.html" class="navigation__link">Sign in</a>
+      </nav>
+
+      <div class="half-screen half-screen--right half-screen--vert-centered">
+        <h2 class="title">Log In</h2>
+        <form class="fields">
+          <input type="text" class="field" placeholder="Ваш логін">
+          <input type="text" class="field" placeholder="Пароль">
+          <button type="text" class="submit-btn">Увійти</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script src="./build/js/main.min.js"></script>
 </body>
