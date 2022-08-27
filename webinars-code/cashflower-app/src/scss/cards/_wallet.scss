@@ -1,0 +1,26 @@
+.wallet {
+  padding: 24px;
+  background: $black-lighten;
+  border-radius: $small-radius;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: $accent;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #000;
+  }
+}

@@ -1,5 +1,6 @@
 $white-text: #f3f3f3;
 $black-bg: #151515;
+$black-lighten: #101010;
 $accent: #ff632d;
 
 $small-radius: 4px;
@@ -55,6 +56,10 @@ $small-radius: 4px;
   width: 1312px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.content {
+  margin-top: 30px;
 }
 
 .title {

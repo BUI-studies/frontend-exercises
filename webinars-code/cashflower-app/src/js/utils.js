@@ -8,13 +8,12 @@ export const Storage = {
 }
 
 export const cleanPage = () => {
-  document.querySelector('.screen').innerHTML = `
-  <div class="container screen__content">
+  document.querySelector('.screen__bg')?.remove()
+  document.querySelector('.screen .container').innerHTML = `
     <nav class="navigation">
       <h1 class="company-logo">CASHFLOWER</h1>
-      <a href="./sign-in.html" class="navigation__link">Sign in</a>
+      <a href="./sign-in" class="navigation__link">Sign in</a>
     </nav>
     <div class="content"></div>
-  </div>
   `
 }
