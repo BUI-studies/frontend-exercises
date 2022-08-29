@@ -37,5 +37,17 @@ export default {
     const res = await fetch(`${path.wallets}/${ownerId}`)
 
     return await res.json()
+  },
+
+  async saveWallet(wallet) {
+    const res = await fetch(path.wallets, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(wallet)
+    })
+
+    return await res.json()
   }
 }

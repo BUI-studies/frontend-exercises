@@ -1,4 +1,5 @@
 import { plusIcon } from '../icons.js'
+import WalletForm from './WalletForm.js'
 
 export default {
   elements: {
@@ -16,25 +17,30 @@ export default {
     self.classList.add('navigation-tabs')
 
     plusBtn.innerHTML = plusIcon
-    plusBtn.addEventListener('click', e => this.handleAddEntity(e))
+    plusBtn.addEventListener('click', e => this.handleAddEntity(e, 'Гаманці'))
     plusBtn.classList.add('navigation-tabs__add-btn')
 
-    self.insertAdjacentHTML(
-      'afterbegin',
-      `
+    if (self.children.length === 0) {
+      self.insertAdjacentHTML(
+        'afterbegin',
+        `
         <p class="navigation-tabs__item navigation__item--current">Гаманці</p>
-      `
-    )
+        `
+      )
+    }
 
     self.append(plusBtn)
 
     this.parent.append(self)
   },
 
-  handleAddEntity(modalContent) {
+  handleAddEntity(e, entityType) {
     const { modal, modalContentWrapper } = this.elements
 
-    modalContentWrapper.innerHTML = modalContent
+    modal.classList.add('modal')
+    modalContentWrapper.classList.add('modal-content')
+
+    WalletForm.render(modalContentWrapper)
     modal.append(modalContentWrapper)
 
     document.body.prepend(modal)

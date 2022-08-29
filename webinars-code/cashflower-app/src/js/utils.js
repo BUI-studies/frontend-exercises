@@ -12,8 +12,13 @@ export const Storage = {
 
 export const cleanPage = () => {
   const screenContainer = document.querySelector('.screen')
+  const modal = document.querySelector('.modal')
 
   if (!!screenContainer) {
     screenContainer.innerHTML = ''
+  }
+
+  if (!!modal) {
+    modal.remove()
   }
 }

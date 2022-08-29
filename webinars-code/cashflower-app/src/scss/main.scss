@@ -2,9 +2,9 @@
 @import './_fonts';
 @import './_common';
 
-@import "src/scss/cards/wallet";
+@import 'src/scss/cards/wallet';
 
 @import './sections/navigation';
 @import './sections/fields';
-@import 'src/scss/sections/wallets';
-
+@import './sections/wallets';
+@import './sections/modal';
