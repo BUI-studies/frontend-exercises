@@ -1,40 +1,28 @@
-import WalletsPage from "./WalletsPage.js";
-import {cleanPage, Storage} from "../utils.js";
-import API from "../API.js";
+import WalletsPage from './WalletsPage.js'
+import { cleanPage, Storage } from '../utils.js'
+import API from '../API.js'
+import MainPage from './MainPage.js'
+import NavigationTabs from '../components/NavigationTabs.js'
 
 export default {
-  HTML: `
-  <div class="half-screen half-screen--right half-screen--vert-centered">
-    <h2 class="title">Log In</h2>
-    <form class="fields">
-      <input type="text" class="field" id="userName" placeholder="Ваш логін">
-      <input type="password" class="field" id="userPassword" placeholder="Пароль">
-      <button type="submit" class="submit-btn" id="loginBtn">Увійти</button>
-    </form>
-  </div>
-  `,
-
   elements: {
     self: document.createElement('div'),
     title: document.createElement('h2'),
     form: document.createElement('form'),
     login: document.createElement('input'),
     password: document.createElement('input'),
-    submitBtn: document.createElement('button'),
+    submitBtn: document.createElement('button')
   },
 
-  render(parent) {
+  render(parent = document.querySelector('.screen .container')) {
     this.elements.parent = parent
-    const {
-      self,
-      title,
-      form,
-      login,
-      password,
-      submitBtn
-    } = this.elements
+    const { self, title, form, login, password, submitBtn } = this.elements
 
-    self.classList.add('half-screen', 'half-screen--right', 'half-screen--vert-centered')
+    self.classList.add(
+      'half-screen',
+      'half-screen--right',
+      'half-screen--vert-centered'
+    )
     title.classList.add('title')
     form.classList.add('fields')
     login.classList.add('field')
@@ -50,7 +38,7 @@ export default {
 
     submitBtn.setAttribute('id', 'loginBtn')
     submitBtn.textContent = 'Увійти'
-    submitBtn.addEventListener('click', (e) => this.handleLogin(e))
+    submitBtn.addEventListener('click', e => this.handleLogin(e))
 
     form.append(login, password, submitBtn)
     self.append(title, form)
@@ -69,7 +57,9 @@ export default {
     if (user.length > 0) {
       Storage.setItem('user', user[0])
       cleanPage()
-      await WalletsPage.render(this.elements.parent)
+
+      await MainPage.render()
+      await WalletsPage.render()
     } else {
       e.target.parentElement.reset()
       throw new Error('No such user')

@@ -4,16 +4,16 @@ export const Storage = {
   },
   getItem(key) {
     return JSON.parse(localStorage.getItem(key))
+  },
+  removeItem(key) {
+    return localStorage.removeItem(key)
   }
 }
 
 export const cleanPage = () => {
-  document.querySelector('.screen__bg')?.remove()
-  document.querySelector('.screen .container').innerHTML = `
-    <nav class="navigation">
-      <h1 class="company-logo">CASHFLOWER</h1>
-      <a href="./sign-in" class="navigation__link">Sign in</a>
-    </nav>
-    <div class="content"></div>
-  `
+  const screenContainer = document.querySelector('.screen')
+
+  if (!!screenContainer) {
+    screenContainer.innerHTML = ''
+  }
 }

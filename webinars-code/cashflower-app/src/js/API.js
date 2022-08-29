@@ -12,14 +12,24 @@ const path = Object.freeze({
   },
   get transactions() {
     return `${this.host}/api/transactions`
-  },
+  }
 })
 
 export default {
   async getUser(name, password) {
-    const res = await fetch(
-      `${path.users}?name=${name}&password=${password}`
-    )
+    const res = await fetch(`${path.users}?name=${name}&password=${password}`)
+    return await res.json()
+  },
+
+  async saveUser(user) {
+    const res = await fetch(path.users, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(user)
+    })
+
     return await res.json()
   },
 
