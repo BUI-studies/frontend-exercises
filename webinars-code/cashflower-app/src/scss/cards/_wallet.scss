@@ -15,6 +15,7 @@
     font-size: 16px;
     color: $accent;
   }
+
   &__item {
     display: flex;
     align-items: center;
@@ -22,5 +23,28 @@
     margin-bottom: 10px;
     font-size: 15px;
     color: #000;
+  }
+
+  &__remove-btn {
+    width: 100%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: $accent;
+    color: $white-text;
+    cursor: pointer;
+
+    & svg {
+      width: 18px;
+      height: 18px;
+      padding: 0;
+      background-color: $accent;
+    }
+
+    & path {
+      fill: $white-text;
+    }
   }
 }

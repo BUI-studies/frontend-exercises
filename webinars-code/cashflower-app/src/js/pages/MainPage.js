@@ -1,4 +1,4 @@
-import { Storage, cleanPage } from '../utils.js'
+import {Storage, cleanPage} from '../utils.js'
 import LogInPage from './LogInPage.js'
 import RegisterPage from './RegisterPage.js'
 
@@ -26,8 +26,8 @@ export default {
 
   async render(parent = document.body) {
     this.elements.parent = parent
-    const { container, link, registerLink } = this.elements
-    const { screenBG, navPannel } = this.html
+    const {container, link, registerLink} = this.elements
+    const {screenBG, navPannel} = this.html
 
     link.classList.add('navigation__link')
     link.textContent = this.getLinkText()
@@ -37,8 +37,8 @@ export default {
     registerLink.textContent = 'Register'
     registerLink.href = '/register'
 
-    registerLink.addEventListener('click', e => this.handleRedirect(e))
-    link.addEventListener('click', e => this.handleLinkClick(e))
+    registerLink.onclick = e => this.handleRedirect(e)
+    link.onclick = e => this.handleLinkClick(e)
 
     container.classList.add('screen')
 
@@ -61,7 +61,7 @@ export default {
 
   handleLinkClick(e) {
     e.preventDefault()
-    const { link } = this.elements
+    const {link} = this.elements
 
     switch (link.textContent) {
       case 'Log out':

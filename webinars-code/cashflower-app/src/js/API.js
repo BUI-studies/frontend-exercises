@@ -49,5 +49,13 @@ export default {
     })
 
     return await res.json()
+  },
+
+  async removeWallet(id) {
+    const res = await fetch(`${path.wallets}/${id}`, {
+      method: 'DELETE'
+    })
+
+    return await res.json()
   }
 }

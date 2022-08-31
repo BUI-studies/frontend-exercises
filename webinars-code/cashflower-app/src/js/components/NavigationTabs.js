@@ -1,4 +1,4 @@
-import { plusIcon } from '../icons.js'
+import {plusIcon} from '../icons.js'
 import WalletForm from './WalletForm.js'
 
 export default {
@@ -11,13 +11,13 @@ export default {
   },
 
   render(parent) {
-    const { self, plusBtn } = this.elements
+    const {self, plusBtn} = this.elements
     this.parent = parent
 
     self.classList.add('navigation-tabs')
 
     plusBtn.innerHTML = plusIcon
-    plusBtn.addEventListener('click', e => this.handleAddEntity(e, 'Гаманці'))
+    plusBtn.onclick = e => this.handleAddEntity(e, 'Гаманці')
     plusBtn.classList.add('navigation-tabs__add-btn')
 
     if (self.children.length === 0) {
@@ -35,7 +35,7 @@ export default {
   },
 
   handleAddEntity(e, entityType) {
-    const { modal, modalContentWrapper } = this.elements
+    const {modal, modalContentWrapper} = this.elements
 
     modal.classList.add('modal')
     modalContentWrapper.classList.add('modal-content')
@@ -43,6 +43,19 @@ export default {
     WalletForm.render(modalContentWrapper)
     modal.append(modalContentWrapper)
 
+    const modalHandler = e => this.handleModalBGClick(e, modalHandler)
+    modal.addEventListener('click', modalHandler)
+
     document.body.prepend(modal)
+  },
+
+  handleModalBGClick({target}, handler) {
+    const {modal} = this.elements
+    if (target.classList.contains('modal')) {
+      modal.removeEventListener('click', handler)
+      debugger
+      WalletForm.remove()
+      modal.remove()
+    }
   }
 }

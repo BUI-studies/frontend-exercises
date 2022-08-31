@@ -15,6 +15,7 @@ $small-radius: 4px;
   width: 100vw;
   height: 100vh;
   background-color: $black-bg;
+  overflow-y: auto;
 
   &__content {
     position: relative;
