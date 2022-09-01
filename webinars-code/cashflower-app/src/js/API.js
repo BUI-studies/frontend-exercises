@@ -57,5 +57,30 @@ export default {
     })
 
     return await res.json()
-  }
+  },
+
+  async getTransactions(userID) {
+    const res = await fetch(`${path.transactions}/${userID}`)
+    return await res.json()
+  },
+
+  async saveTransaction(transaction) {
+    const res = await fetch(path.transactions, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(transaction)
+    })
+
+    return await res.json()
+  },
+
+  async deleteTransaction(id) {
+    const res = await fetch(`${path.transactions}/${id}`, {
+      method: 'DELETE'
+    })
+
+    return await res.json()
+  },
 }

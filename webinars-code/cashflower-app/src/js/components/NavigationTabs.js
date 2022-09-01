@@ -1,5 +1,10 @@
 import {plusIcon} from '../icons.js'
 import WalletForm from './WalletForm.js'
+import TransactionsPage from "../pages/TransactionsPage.js";
+import TransactionsForm from "./TransactionsForm.js";
+import {cleanPage} from "../utils.js";
+import WalletsPage from "../pages/WalletsPage.js";
+import MainPage from "../pages/MainPage.js";
 
 export default {
   elements: {
@@ -14,22 +19,28 @@ export default {
     const {self, plusBtn} = this.elements
     this.parent = parent
 
-    self.classList.add('navigation-tabs')
-
-    plusBtn.innerHTML = plusIcon
-    plusBtn.onclick = e => this.handleAddEntity(e, 'Гаманці')
-    plusBtn.classList.add('navigation-tabs__add-btn')
-
     if (self.children.length === 0) {
+      self.classList.add('navigation-tabs')
+
+      plusBtn.innerHTML = plusIcon
+      plusBtn.onclick = e => this.handleAddEntity(e, 'гаманці')
+      plusBtn.classList.add('navigation-tabs__add-btn')
+
       self.insertAdjacentHTML(
         'afterbegin',
         `
-        <p class="navigation-tabs__item navigation__item--current">Гаманці</p>
+        <p class="navigation-tabs__item navigation-tabs__item--current" data-tab="wallets">Гаманці</p>
         `
       )
+
+      self.append(plusBtn)
+      self.insertAdjacentHTML('beforeend', `
+        <p class="navigation-tabs__item" data-tab="transactions">Транзакції</p>
+      `)
+
+      self.onclick = e => this.handleChangeTab(e)
     }
 
-    self.append(plusBtn)
 
     this.parent.append(self)
   },
@@ -40,7 +51,14 @@ export default {
     modal.classList.add('modal')
     modalContentWrapper.classList.add('modal-content')
 
-    WalletForm.render(modalContentWrapper)
+    switch (entityType) {
+      case 'гаманці':
+        WalletForm.render(modalContentWrapper)
+        break
+      case 'транзакції':
+        TransactionsForm.render(modalContentWrapper)
+    }
+
     modal.append(modalContentWrapper)
 
     const modalHandler = e => this.handleModalBGClick(e, modalHandler)
@@ -48,7 +66,6 @@ export default {
 
     document.body.prepend(modal)
   },
-
   handleModalBGClick({target}, handler) {
     const {modal} = this.elements
     if (target.classList.contains('modal')) {
@@ -56,6 +73,31 @@ export default {
       debugger
       WalletForm.remove()
       modal.remove()
+    }
+  },
+  async handleChangeTab({target}) {
+    if (target.classList.contains('navigation-tabs__item')) {
+      const {self, plusBtn} = this.elements
+      const currentTab = self.querySelector('.navigation-tabs__item--current')
+      const newTab = target
+      const currentTabName = target.dataset.tab
+      currentTab.classList.remove('navigation-tabs__item--current')
+      newTab.classList.add('navigation-tabs__item--current')
+
+      cleanPage()
+      await MainPage.render()
+      this.render(document.querySelector('.screen .container'))
+
+      switch (currentTabName) {
+        case 'wallets':
+          await WalletsPage.render()
+          plusBtn.onclick = e => this.handleAddEntity(e, 'гаманці')
+          break
+        case 'transactions':
+          await TransactionsPage.render()
+          plusBtn.onclick = e => this.handleAddEntity(e, 'транзакції')
+          break
+      }
     }
   }
 }
