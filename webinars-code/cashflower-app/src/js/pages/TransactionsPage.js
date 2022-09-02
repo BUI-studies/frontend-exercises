@@ -1,8 +1,8 @@
 import API from '../API.js'
-import {cleanPage, Storage} from '../utils.js'
+import { cleanPage, Storage } from '../utils.js'
 import Transaction from '../entities/Transaction.js'
 import NavigationTabs from '../components/NavigationTabs.js'
-import MainPage from "./MainPage.js";
+import MainPage from './MainPage.js'
 
 export const _TRANSACTIONS = []
 
@@ -12,8 +12,8 @@ export default {
   },
 
   async render(parent = document.querySelector('.screen .container')) {
-    const {transactionsWrapper} = this.elements
-    const {id} = Storage.getItem('user')
+    const { transactionsWrapper } = this.elements
+    const { id } = Storage.getItem('user')
     const transactions = await API.getTransactions(id)
 
     if (!transactions) throw new Error('No transactions found')
@@ -24,7 +24,7 @@ export default {
       transactionsWrapper.innerHTML = ''
     }
 
-    transactionsWrapper.classList.add('wallets')
+    transactionsWrapper.classList.add('transactions')
 
     transactions.forEach(wallet => {
       const newTransaction = new Transaction(wallet)
@@ -42,7 +42,7 @@ export default {
   async handleRemoveTransaction(e) {
     if (e.target.classList.contains('transaction__remove-btn')) {
       const transactionId = e.target.closest('.wallet').dataset.id
-      const removeIndex = _TRANSACTIONS.findIndex(w => w.id = transactionId)
+      const removeIndex = _TRANSACTIONS.findIndex(w => (w.id = transactionId))
 
       await API.deleteTransaction(transactionId)
 

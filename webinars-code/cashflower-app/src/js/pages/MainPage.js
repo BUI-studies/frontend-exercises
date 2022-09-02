@@ -1,4 +1,4 @@
-import {Storage, cleanPage} from '../utils.js'
+import { Storage, cleanPage } from '../utils.js'
 import LogInPage from './LogInPage.js'
 import RegisterPage from './RegisterPage.js'
 
@@ -18,7 +18,7 @@ export default {
     navPannel: `
     <div class="container screen__content">
       <nav class="navigation">
-        <h1 class="company-logo">CASHFLOWER</h1>
+        <h1 class="company-logo">ГотівкаКвітка</h1>
       </nav>
     </div>
     `
@@ -26,8 +26,8 @@ export default {
 
   async render(parent = document.body) {
     this.elements.parent = parent
-    const {container, link, registerLink} = this.elements
-    const {screenBG, navPannel} = this.html
+    const { container, link, registerLink } = this.elements
+    const { screenBG, navPannel } = this.html
 
     link.classList.add('navigation__link')
     link.textContent = this.getLinkText()
@@ -61,7 +61,7 @@ export default {
 
   handleLinkClick(e) {
     e.preventDefault()
-    const {link} = this.elements
+    const { link } = this.elements
 
     switch (link.textContent) {
       case 'Log out':

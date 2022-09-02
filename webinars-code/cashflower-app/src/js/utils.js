@@ -22,3 +22,9 @@ export const cleanPage = () => {
     modal.remove()
   }
 }
+
+export const _PAGES = Object.freeze({
+  wallets: 'wallets',
+  transactions: 'transactions',
+  categories: 'categories'
+})
