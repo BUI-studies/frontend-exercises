@@ -10,7 +10,7 @@ export const path = {
   },
   html: './index.html',
   js: './src/js/**/*.js',
-  mainJS: './src/js/main.js',
+  mainJS: './src/js/app.js',
   scss: './src/scss/**/*.scss',
   assets: './src/assets/**/*',
   img: './src/assets/img/**/*',

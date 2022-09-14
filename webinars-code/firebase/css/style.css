@@ -1,0 +1,39 @@
+:root {
+  --color-grey: #a0a0a0;
+  --color-dark-grey: #333;
+}
+
+* {
+  color: var(--color-dark-grey);
+}
+
+.container  {
+  max-width: 1240px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px var(--color-grey);
+  margin-bottom: 40px;
+}
+
+.controls-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.controls-description {
+  font-size: 12px;
+  text-align: center;
+}
+
+.game-field {
+  border: 10px solid var(--color-grey);
+  min-height: 200px;
+}
