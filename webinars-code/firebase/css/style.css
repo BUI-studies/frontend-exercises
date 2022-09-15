@@ -3,6 +3,7 @@
   --color-dark-grey: #333;
   --color-red: #933;
   --color-green: #393;
+  --color-white: #fff;
   --small-radius: 5px;
 }
 
@@ -46,6 +47,20 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+.controls-username {
+  border: none;
+  outline: none;
+  border-radius: var(--small-radius);
+  padding: 10px 20px;
+  background-color: var(--color-dark-grey);
+  color: var(--color-grey);
+  align-self: center;
+}
+
+.controls-username:focus {
+  color: var(--color-white);
 }
 
 .start-btn {

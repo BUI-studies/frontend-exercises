@@ -17,7 +17,8 @@ export default class Game {
   elements = {
     root: null,
     gameInfo: null,
-    timing: null
+    timing: null,
+    userName: null
   }
   cursor = {
     x: null,
@@ -39,7 +40,7 @@ export default class Game {
   didFirstMove = false
 
   constructor({ selectors, classes, history }) {
-    const { root, startBtn, gameInfo, timing } = selectors
+    const { root, startBtn, gameInfo, timing, userName } = selectors
 
     this.classes = { ...this.classes, ...classes }
     this.history = history
@@ -48,6 +49,7 @@ export default class Game {
     this.elements.startBtn = document.querySelector(startBtn)
     this.elements.gameInfo = document.querySelector(gameInfo)
     this.elements.timing = document.querySelector(timing)
+    this.elements.userName = document.querySelector(userName)
 
     document.oncontextmenu = e => {
       e.preventDefault()
@@ -55,7 +57,7 @@ export default class Game {
     }
   }
 
-  render() {
+  async render() {
     document.addEventListener('mousemove', e => this.handleMouseMove(e))
 
     document.addEventListener('keyup', e => {
@@ -68,10 +70,32 @@ export default class Game {
       }
     })
 
-    this.elements.gameInfo.insertAdjacentHTML(
-      'afterbegin',
-      this.history.map(h => `<li>${h.time}</li>`).join('\n')
-    )
+    this.elements.userName.addEventListener('blur', async ({ target }) => {
+      const snSht = await db
+        .collection('users')
+        .where('name', '==', target.value)
+        .get()
+      let usr = null
+
+      if (!snSht.empty) {
+        const usrRes = snSht.docs[0]
+        usr = {
+          id: usrRes.id,
+          ...usrRes.data()
+        }
+      } else {
+        const saved = await db.collection('users').add({ name: target.value })
+        const usrFromDb = await db.collection('users').doc(saved.id).get()
+        usr = {
+          id: saved.id,
+          ...usrFromDb.data()
+        }
+      }
+
+      this.user = usr
+    })
+
+    await this.getAllHistory()
   }
 
   start() {
@@ -107,24 +131,12 @@ export default class Game {
     this.enemy.self.remove()
     this.enemy.rendered = false
 
-    const response = await db.collection('history').add({
-      time: this.time,
-      date: Date.now()
-    })
-
-    const dataSnapshot = await db.collection('history').get()
-    this.elements.gameInfo.innerHTML = ''
-    this.history = []
-
-    dataSnapshot.forEach(doc => {
-      this.elements.gameInfo.innerHTML += `<li>${doc.data().time}</li>`
-      this.history.push({
-        id: doc.id,
-        ...doc.data()
+    if (this.time !== null) {
+      await this.handleSaveHistory({
+        time: this.time,
+        date: Date.now()
       })
-    })
-
-    console.log(this.history)
+    }
 
     this.time = null
     this.elements.timing.textContent = `Your time:`
@@ -222,6 +234,55 @@ export default class Game {
       cursorX <= enemyX + enemyWidth &&
       cursorY > enemyY &&
       cursorY < enemyY + enemyHeight
+    )
+  }
+
+  async getAllHistory() {
+    const dataSnapshot = await db.collection('history').get()
+    this.elements.gameInfo.innerHTML = ''
+
+    this.history = await Promise.all(
+      dataSnapshot.docs.map(async doc => {
+        const data = doc.data()
+        const owner = await db.collection('users').doc(data.owner.id).get()
+
+        return {
+          id: doc.id,
+          ...data,
+          owner: {
+            id: data.owner.id,
+            ...owner.data()
+          }
+        }
+      })
+    )
+    this.renderHistory()
+  }
+
+  async handleSaveHistory(payload) {
+    await db.collection('history').add(payload)
+
+    const dataSnapshot = await db.collection('history').get()
+    this.elements.gameInfo.innerHTML = ''
+
+    this.history = await Promise.all(
+      dataSnapshot.docs.map(async doc => {
+        const data = doc.data()
+
+        return {
+          id: doc.id,
+          ...data,
+          owner: await db.collection('users').doc(this.user.id).get()
+        }
+      })
+    )
+    this.renderHistory()
+  }
+
+  renderHistory() {
+    this.elements.gameInfo.insertAdjacentHTML(
+      'afterbegin',
+      this.history.map(h => `<li>${h.time}</li>`).join('\n')
     )
   }
 }
