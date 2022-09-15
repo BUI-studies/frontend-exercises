@@ -8,7 +8,7 @@
 
 * {
   color: var(--color-dark-grey);
-  user-select: none
+  user-select: none;
 }
 
 .container {
@@ -39,6 +39,13 @@
 .controls-timing {
   font-weight: 700;
   text-align: center;
+}
+
+.controls-info {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .start-btn {

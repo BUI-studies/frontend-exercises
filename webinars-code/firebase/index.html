@@ -1,24 +1,29 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tom & Jerry</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-<div class="controls">
-  <h1 class="controls-title">Tom & Jerry</h1>
-  <p class="controls-description">Put your cursor into the container and press Space</p>
-  <p class="controls-timing">Your time: </p>
-</div>
-<div class="container game-field"></div>
 
-<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
-<script type="module" src="js/app.js"></script>
+<body>
+  <div class="controls">
+    <h1 class="controls-title">Tom & Jerry</h1>
+    <p class="controls-description">Put your cursor into the container and press Space</p>
+    <p class="controls-timing">Your time: </p>
+    <ul class="controls-info">
+    </ul>
+  </div>
+  <div class="container game-field"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+  <script type="module" src="js/app.js"></script>
 </body>
+
 </html>
