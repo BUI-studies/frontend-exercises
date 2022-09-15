@@ -1,8 +1,7 @@
 import API from '../API.js'
 import MainPage from '../pages/MainPage.js'
-import WalletsPage from '../pages/WalletsPage.js'
-import {cleanPage, Storage} from '../utils.js'
-import TransactionsPage from "../pages/TransactionsPage.js";
+import { cleanPage, Storage } from '../utils.js'
+import TransactionsPage from '../pages/TransactionsPage.js'
 
 export default {
   elements: {
@@ -20,14 +19,18 @@ export default {
   render(parent) {
     this.elements.parent = parent
     const {
-      self, title, form, type,
-      category, wallet, amount,
-      comment, submitBtn
+      self,
+      title,
+      form,
+      type,
+      category,
+      wallet,
+      amount,
+      comment,
+      submitBtn
     } = this.elements
 
-    self.classList.add(
-      'transaction-form',
-    )
+    self.classList.add('transaction-form')
     title.classList.add('title')
     form.classList.add('fields')
     type.classList.add('field')
@@ -64,13 +67,7 @@ export default {
     submitBtn.textContent = 'Зберегти'
     submitBtn.onclick = e => this.handleSaveTransaction(e)
 
-    form.append(
-      type,
-      category,
-      wallet,
-      amount,
-      submitBtn
-    )
+    form.append(type, category, wallet, amount, submitBtn)
 
     self.append(title, form)
 
@@ -81,10 +78,15 @@ export default {
     e.preventDefault()
 
     const {
-      self, title, form, type,
+      self,
+      title,
+      form,
+      type,
       category,
       wallet,
-      amount, comment, submitBtn
+      amount,
+      comment,
+      submitBtn
     } = this.elements
     submitBtn.disabled = true
 
@@ -101,11 +103,13 @@ export default {
     if (!!savedTransaction) {
       form.reset()
       submitBtn.onclick = null
-      submitBtn.disabled = false
+
       cleanPage()
 
       MainPage.render()
       TransactionsPage.render()
     }
-  },
+
+    submitBtn.disabled = false
+  }
 }

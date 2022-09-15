@@ -83,4 +83,27 @@ export default {
 
     return await res.json()
   },
+
+  async getCategories(userID) {
+    const res = await fetch(`${path.category}/${userID}`)
+    return await res.json()
+  },
+
+  async saveCategories(category) {
+    const res = await fetch(path.category, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(category)
+    })
+    return await res.json()
+  },
+
+  async deleteCategories(categoryID) {
+    const res = await fetch(`${path.category}/${categoryID}`, {
+      method: 'DELETE'
+    })
+    return await res.json()
+  }
 }
